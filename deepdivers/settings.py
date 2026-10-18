@@ -27,6 +27,8 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-local-dev-only
 DEBUG = True
 
 ALLOWED_HOSTS = ['www.bwtechglobal.com', 'bwtechglobal.com']
+if os.environ.get("VERCEL"):
+    ALLOWED_HOSTS.append(".vercel.app")
 
 
 # Application definition
@@ -139,7 +141,10 @@ STATICFILES_DIRS = [
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/calljyqw/bwtechglobal.com/static'
+if os.environ.get("VERCEL"):
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+else:
+    STATIC_ROOT = '/home/calljyqw/bwtechglobal.com/static'
 
 
 # Default primary key field type

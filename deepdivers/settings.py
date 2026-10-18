@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'calljyqw_deepdivers',
         'USER': 'calljyqw_deepdivers',
-        'PASSWORD': os.environ.get("DB_PASSWORD", ""),
+        'PASSWORD': 'M%Ihg,$lXo64',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -141,10 +141,7 @@ STATICFILES_DIRS = [
 
 
 STATIC_URL = '/static/'
-if os.environ.get("VERCEL"):
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-else:
-    STATIC_ROOT = '/home/calljyqw/bwtechglobal.com/static'
+STATIC_ROOT = '/home/calljyqw/bwtechglobal.com/static'
 
 
 # Default primary key field type

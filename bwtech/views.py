@@ -9,6 +9,7 @@ from .models import *
 from django.core.paginator import Paginator
 import random
 from django.contrib import messages
+from django.db.utils import DatabaseError
 # Create your views here.
 
 #  services = Service.objects.all()  # Fetch all services
@@ -23,9 +24,16 @@ from django.contrib import messages
 #     }
 #     return render(request, 'index.html', context)
     # return render(request, 'index.html', {'services': services})
+def fetch_records(queryset):
+    try:
+        return list(queryset)
+    except DatabaseError:
+        return []
+
+
 def home(request):
-    services = Service.objects.all()
-    latest_projects = Project.objects.all().order_by('-date')[:3]
+    services = fetch_records(Service.objects.all())
+    latest_projects = fetch_records(Project.objects.all().order_by('-date')[:3])
     context = {
         'services': services,
         'projects': latest_projects,
@@ -36,24 +44,28 @@ def home(request):
 def contact_us(request):
     form = ContactForm()
     success_message = ""
-    services = Service.objects.all()
+    services = fetch_records(Service.objects.all())
 
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            success_message = "Your message has been sent successfully!"
-            form = ContactForm()  # Reset form after submission
+            try:
+                form.save()
+            except DatabaseError:
+                success_message = "Your message could not be saved right now."
+            else:
+                success_message = "Your message has been sent successfully!"
+                form = ContactForm()  # Reset form after submission
 
     return render(request, 'contact.html', {'form': form, 'success_message': success_message, 'services': services})
 
 def about_us(request):
-    services = Service.objects.all()
+    services = fetch_records(Service.objects.all())
     return render(request, 'about.html', {'services': services})
 
 
 def service(request):
-    services = Service.objects.all()
+    services = fetch_records(Service.objects.all())
     return render(request, 'service.html', {'services': services})
 
 
@@ -70,9 +82,9 @@ def service(request):
 
 #     return render(request, 'projects.html', {'page_obj': page_obj, 'services': services})
 def projects(request):
-    projects_list = Project.objects.all().order_by('-date')
+    projects_list = fetch_records(Project.objects.all().order_by('-date'))
     paginator = Paginator(projects_list, 9)
-    services = Service.objects.all()
+    services = fetch_records(Service.objects.all())
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 

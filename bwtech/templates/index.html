@@ -1,0 +1,2953 @@
+{% extends "base.html" %}
+{%load static %}
+{%block title%}BW Tech Global | IACS-Approved Diving, In-Water Survey (IWS) & Subsea Services in West Africa{% endblock %}
+  {% block metadesc %}
+    <meta name="description" content="[24/7 Rapid Vessel Attendance] IACS-approved In-Water Surveys (IWS/UWILD), commercial diving, hull cleaning, propeller polishing & lifeboat inspections across Lagos, Cotonou, Lomé, Tema, Abidjan, Conakry & Dakar.">
+    {% endblock %}
+
+{% block seo_meta %}
+<!-- ==========================================
+     BW TECH GLOBAL: HIGH-CTR SEO & AEO HEAD PACK
+     ========================================== -->
+<meta name="keywords" content="commercial diving West Africa, In-Water Survey IWS Lagos, UWILD inspection Abidjan, hull cleaning Cotonou, propeller polishing Tema, subsea engineering Lome, life raft lifeboat inspection Nigeria, Port of Conakry Kamsar Dapilon marine services, Apapa Tin Can port diving, inspection sous-marine Afrique de l'Ouest" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="author" content="BW Tech Global">
+<link rel="canonical" href="https://bwtechglobal.com/" />
+
+<!-- Open Graph / High-CTR Link Previews (WhatsApp, LinkedIn, Email) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bwtechglobal.com/" />
+<meta property="og:title" content="BW Tech Global | Class-Approved Subsea & Marine Inspection — West Africa" />
+<meta property="og:description" content="24/7 IACS-Approved Underwater Inspections (IWS), Hull Cleaning, Commercial Diving & Safety Equipment Servicing across 10 major West African ports." />
+<meta property="og:site_name" content="BW Tech Global" />
+<meta property="og:image" content="https://bwtechglobal.com/static/assets/img/logo/BW_TECH_LOGO.png" />
+
+<!-- Primary Geo-Positioning Tags (West Africa Maritime Hub) -->
+<meta name="geo.region" content="NG-LA" />
+<meta name="geo.placename" content="Lagos, Cotonou, Lomé, Tema, Abidjan, Conakry, Dakar" />
+<meta name="geo.position" content="6.4474;3.3903" />
+<meta name="ICBM" content="6.4474, 3.3903" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BW Tech Global | Class-Approved Subsea & Marine Inspection — West Africa">
+<meta name="twitter:description" content="24/7 IACS-Approved Underwater Inspections (IWS), Hull Cleaning, Commercial Diving & Safety Equipment Servicing across 10 major West African ports.">
+<meta name="twitter:image" content="https://bwtechglobal.com/static/assets/img/logo/BW_TECH_LOGO.png">
+
+<!-- Enterprise JSON-LD Schema: Organization + Marine/Professional Service + 10 Target Ports + AEO FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://bwtechglobal.com/#organization",
+      "name": "BW Tech Global",
+      "url": "https://bwtechglobal.com/",
+      "description": "Premier IACS-approved marine engineering, commercial diving, underwater inspection (IWS/UWILD), hull cleaning, propeller polishing, and lifeboat/life raft safety inspection provider operating across West African ports.",
+      "areaServed": [
+        { "@type": "Place", "name": "Apapa Port, Lagos, Nigeria" },
+        { "@type": "Place", "name": "Tin Can Island Port, Lagos, Nigeria" },
+        { "@type": "Place", "name": "Port of Cotonou, Benin" },
+        { "@type": "Place", "name": "Port of Lomé, Togo" },
+        { "@type": "Place", "name": "Port of Tema, Ghana" },
+        { "@type": "Place", "name": "Port of Abidjan, Côte d'Ivoire" },
+        { "@type": "Place", "name": "Autonomous Port of Conakry, Guinea" },
+        { "@type": "Place", "name": "Port of Kamsar, Guinea" },
+        { "@type": "Place", "name": "Port of Dapilon, Guinea" },
+        { "@type": "Place", "name": "Port of Dakar, Senegal" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Subsea & Marine Engineering Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IACS-Approved In-Water Survey (IWS) & UWILD Inspections",
+              "description": "Class-approved CCTV underwater hull, rudder, thruster, and tailshaft inspections for vessels at anchor or berth."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Underwater Hull Cleaning & Propeller Polishing",
+              "description": "Fuel-saving subsea biofouling removal and multi-stage Rupert scale propeller polishing across West African ports."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Diving & Subsea Maintenance",
+              "description": "24/7 emergency subsea repairs, sea chest blanking, cofferdam installation, anode replacement, and salvage support."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Life Raft, Lifeboat & Marine Safety Inspections (LSA/FFA)",
+              "description": "Certified annual and 5-yearly inspections, load testing, and servicing of lifeboats, life rafts, davits, and firefighting systems."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bwtechglobal.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which ports in West Africa does BW Tech Global cover for underwater inspections and commercial diving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BW Tech Global provides 24/7 vessel attendance across 10 major West African ports: Apapa Port and Tin Can Island Port (Lagos, Nigeria), Port of Cotonou (Benin), Port of Lomé (Togo), Port of Tema (Ghana), Port of Abidjan (Côte d'Ivoire), Autonomous Port of Conakry, Port of Kamsar, and Port of Dapilon (Guinea), and Port of Dakar (Senegal)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are BW Tech Global's In-Water Surveys (IWS) approved by IACS classification societies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BW Tech Global conducts IACS-compliant In-Water Surveys (IWS) and UWILD inspections with real-time two-way audio and high-definition CCTV video documentation for class surveyors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does BW Tech Global perform lifeboat and life raft safety inspections alongside subsea works?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. In addition to commercial diving, hull cleaning, and propeller polishing, BW Tech Global provides certified LSA/FFA safety inspections and servicing for life rafts, lifeboats, and marine safety equipment."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{%block content%}
+<style>
+
+    /* Professional Hero Section Typography & Spacing */
+    
+    /* Hero Section Base Styles */
+    .vl-hero-section-title {
+        padding: 0;
+        position: relative;
+        z-index: 10;
+        /* margin-bottom: 3rem; */
+    }
+    
+    /* SUBTITLE FIXES - Enhanced Visibility */
+    .vl-hero-section-title .vl-subtitle {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+        color: #ffffff !important; /* Force white color */
+        margin-bottom: 1.5rem !important; /* Ensure margin is applied */
+        line-height: 1.4;
+        text-transform: uppercase;
+        display: flex !important; /* Force display */
+        align-items: center;
+        gap: 10px;
+        opacity: 1 !important; /* Force visibility */
+        visibility: visible !important;
+        position: relative;
+        z-index: 20;
+    }
+    
+    .vl-hero-section-title .vl-subtitle::before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background: #FF6B35;
+        margin-right: 10px;
+    }
+    
+    .vl-hero-section-title h1.vl-title {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 1.25rem;
+        color: #ffffff;
+        letter-spacing: -0.025em;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
+    .vl-hero-section-title p {
+        font-size: 1.125rem;
+        line-height: 1.55;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 400;
+        max-width: 90%;
+    }
+    
+    /* Hero Button Container */
+    .vl-hero-btn {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Button Styles */
+    .vl-hero-btn .header-btn1 {
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: background 0.2s ease, transform 0.2s ease;
+        background: #003366;
+        color: #ffffff;
+        border: none;
+        box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+        min-height: 0;
+    }
+
+    .vl-hero-btn .header-btn1:after,
+    .vl-hero-btn .header-btn1:hover:after {
+        display: none;
+    }
+    
+    .vl-hero-btn .header-btn1:hover {
+        background: #002244;
+        transform: translateY(-1px);
+        color: #ffffff;
+    }
+
+    .vl-hero-btn .header-btn1-ghost {
+        background: rgba(255, 255, 255, 0.94);
+        color: #0f172a;
+        box-shadow: none;
+    }
+
+    .vl-hero-btn .header-btn1-ghost:hover {
+        background: #ffffff;
+        color: #0f172a;
+    }
+    
+    .header-btn1 span {
+        transition: transform 0.3s ease;
+    }
+    
+    .header-btn1:hover span {
+        transform: translateX(4px);
+    }
+    
+    /* Hero Slider Container */
+    .vl-hero-slider {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding-bottom: 4rem;
+    }
+    
+    .vl-hero-bg {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .vl-hero-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Darker overlay for better text contrast */
+        z-index: 1;
+    }
+    
+    .vl-hero-section-title {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Container and Row Alignment */
+    .vl-hero-slider .container {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    
+    .vl-hero-slider .row {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+    }
+    
+    .vl-hero-slider .col-lg-7 {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Social icons positioning */
+    .vl-hero-social {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+    
+    .vl-hero-social .title {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .vl-hero-social-icon ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .vl-hero-social-icon a {
+        color: #ffffff;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .vl-hero-social-icon a:hover {
+        color: #FF6B35;
+        transform: translateY(-2px);
+    }
+    
+    /* ===== MOBILE RESPONSIVE ===== */
+    
+    @media (max-width: 1200px) {
+        .vl-hero-section-title h1.vl-title {
+            font-size: 2.25rem;
+            line-height: 1.05;
+        }
+        
+        .vl-hero-section-title p {
+            font-size: 1.125rem;
+            max-width: 95%;
+        }
+        
+        .vl-hero-slider {
+            height: 90vh;
+            min-height: 600px;
+            padding-bottom: 3rem;
+        }
+        
+        .vl-hero-slider .container {
+            padding-bottom: 3rem;
+        }
+    }
+    
+    /* @media (max-width: 992px) {
+        .vl-hero-section-title {
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .vl-hero-section-title .vl-subtitle {
+            justify-content: center;
+            font-size: 1rem;
+            margin-bottom: 1.25rem !important;
+        }
+        
+        .vl-hero-section-title h1.vl-title {
+            font-size: 2.75rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .vl-hero-section-title p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .vl-hero-btn {
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .header-btn1 {
+            padding: 12px 28px;
+            font-size: 14px;
+            min-height: 50px;
+        }
+        
+        .vl-hero-slider {
+            height: auto;
+            min-height: 85vh;
+            padding-bottom: 3rem;
+        }
+        
+        .vl-hero-slider .container {
+            padding-top: 1.5rem;
+            padding-bottom: 3rem;
+        }
+        
+        .vl-hero-social {
+            display: none;
+        }
+    } */
+    
+    @media (max-width: 768px) {
+        .vl-hero-section-title h1.vl-title {
+            font-size: 1.5rem;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        
+        .vl-hero-section-title p {
+            font-size: 0.875rem;
+            line-height: 1.625;
+            margin-bottom: 1.5rem;
+        }
+        
+        .vl-hero-section-title .vl-subtitle {
+            font-size: 0.75rem;
+            margin-bottom: 1rem !important;
+        }
+        
+        .vl-hero-btn {
+            flex-direction: column;
+            gap: 0.875rem;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        .header-btn1 {
+            padding: 12px 24px;
+            font-size: 14px;
+            width: 100%;
+            max-width: 280px;
+            justify-content: center;
+            min-height: 0;
+        }
+        
+        .vl-hero-slider {
+            height: auto;
+            min-height: 80vh;
+            padding-bottom: 2.5rem;
+        }
+        
+        .vl-hero-slider .container {
+            padding-bottom: 2.5rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .vl-hero-section-title {
+            margin-bottom: 1.5rem;
+        }
+        
+        .vl-hero-section-title h1.vl-title {
+            font-size: 1.5rem;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        
+        .vl-hero-section-title p {
+            font-size: 0.875rem;
+            line-height: 1.625;
+            margin-bottom: 1.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        .vl-hero-section-title .vl-subtitle {
+            font-size: 0.9rem;
+            margin-bottom: 0.875rem !important;
+        }
+        
+        .vl-hero-section-title .vl-subtitle::before {
+            width: 25px;
+            margin-right: 8px;
+        }
+        
+        .header-btn1 {
+            padding: 12px 20px;
+            font-size: 14px;
+            min-height: 0;
+        }
+        
+        .vl-hero-btn {
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .vl-hero-slider {
+            height: auto;
+            min-height: 75vh;
+            padding-bottom: 2rem;
+        }
+        
+        .vl-hero-slider .container {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+    }
+    
+    /* Animation Enhancements */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .vl-hero-section-title .vl-subtitle {
+        animation: fadeInUp 0.6s ease 0.2s both !important;
+    }
+    
+    .vl-hero-section-title h1.vl-title {
+        animation: fadeInUp 0.6s ease 0.4s both;
+    }
+    
+    .vl-hero-section-title p {
+        animation: fadeInUp 0.6s ease 0.6s both;
+    }
+    
+    .vl-hero-btn {
+        animation: fadeInUp 0.6s ease 0.8s both;
+    }
+</style>
+
+<!-- Enhanced Hero Section -->
+<div class="vl-banner p-relative fix" style="margin-top: 50px;">
+    <div class="slider-active-1">
+        <!-- Slide 1 -->
+        <div class="vl-hero-slider vl-hero-bg" style="background-image: url({%static 'assets/img/banner/herobg1.jpg'%});">
+            <div class="vl-hero-social d-none d-lg-block">
+                <h4 class="title">Follow Us:</h4>
+                <div class="vl-hero-social-icon">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="vl-hero-section-title">
+                            <!-- <h5 class="vl-subtitle">
+                                Delivering Excellence in Marine & Offshore Solutions
+                            </h5> -->
+                            <h1 class="vl-title text-anime-style-3">Reliable Marine & Underwater Services</h1>
+                            <p>
+                                From underwater inspections to offshore maintenance, 
+                                BW Tech ensures safety, precision, and innovation in every project.
+                            </p>
+                            <div class="vl-hero-btn">
+                                <a href="{%url 'contact-us'%}" class="header-btn1">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="{%url 'about-us'%}" class="header-btn1 header-btn1-ghost">About BWTech</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="vl-hero-slider vl-hero-bg" style="background-image: url({%static 'assets/img/banner/herobg2.jpg'%});">
+            <div class="vl-hero-social d-none d-lg-block">
+                <h4 class="title">Follow Us:</h4>
+                <div class="vl-hero-social-icon">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="vl-hero-section-title">
+                            <!-- <h5 class="vl-subtitle" style="margin-top: 150px;">
+                                Trusted Experts in Marine & Offshore Solutions
+                            </h5> -->
+                            <h1 class="vl-title text-anime-style-3">Innovative Underwater & Offshore Services</h1>
+                            <p>
+                                From offshore inspections to marine logistics, 
+                                we deliver cutting-edge solutions for the oil & gas industry.
+                            </p>
+                            <div class="vl-hero-btn">
+                                <a href="{%url 'services'%}" class="header-btn1">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="{%url 'about-us'%}" class="header-btn1 header-btn1-ghost">About BWTech</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <div class="stat-label">Expert Team Members</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">12+</span>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <div class="stat-label">Emergency Support</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Enhanced About Section -->
+<section class="vl-about-section sp2 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="vl-about-content">
+                    <div class="vl-section-title-1">
+                        <h2 class="subtitle" data-aos="fade-right">About BW Tech Global</h2>
+                        <h3 class="title text-anime-style-3">Industry Leaders in Marine & Offshore Solutions</h3>
+                        <p class="pb-32">
+                            With over a decade of expertise, BW Tech Global Logistics Services stands at the 
+                            forefront of underwater engineering and marine operations. Our commitment to 
+                            excellence, safety, and innovation has made us the preferred partner for major 
+                            oil & gas companies across West Africa.
+                        </p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-box mb-4">
+                                <i class="fa-solid fa-certificate text-primary me-2"></i>
+                                <strong>Certified Excellence</strong>
+                                <p class="mb-0 small">ISO certified with industry approvals</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box mb-4">
+                                <i class="fa-solid fa-users text-primary me-2"></i>
+                                <strong>Expert Team</strong>
+                                <p class="mb-0 small">Highly trained professionals</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box mb-4">
+                                <i class="fa-solid fa-shield-alt text-primary me-2"></i>
+                                <strong>Safety First</strong>
+                                <p class="mb-0 small">Zero compromise on safety standards</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box mb-4">
+                                <i class="fa-solid fa-bolt text-primary me-2"></i>
+                                <strong>Quick Response</strong>
+                                <p class="mb-0 small">24/7 emergency services</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-area mt-4 mb-4">
+                        <a href="{%url 'about-us'%}" class="btn btn-professional">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <img src="{%static 'assets/img/about/pexels-christian.jpg'%}" alt="Marine Operations" class="img-fluid rounded shadow hover-lift">
+                    </div>
+                    <div class="col-6">
+                        <img src="{%static 'assets/img/about/aboutimg1.jpg'%}" alt="Underwater Inspection" class="img-fluid rounded shadow hover-lift">
+                    </div>
+                    <div class="col-6 mt-4">
+                        <img src="{%static 'assets/img/about/aboutimg3.jpg'%}" alt="Offshore Maintenance" class="img-fluid rounded shadow hover-lift">
+                    </div>
+                    <div class="col-6 mt-4">
+                        <img src="{%static 'assets/img/about/aboutimg2.jpg'%}" alt="Team Work" class="img-fluid rounded shadow hover-lift">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="home-services">
+    <div class="container">
+        <div class="home-services-heading">
+            <h2 class="home-services-kicker">Our Services</h2>
+            <h3 class="home-services-title">Comprehensive Marine &amp; Offshore Solutions</h3>
+            <p>We provide end-to-end solutions for the marine and offshore industries, ensuring operational excellence and asset integrity.</p>
+        </div>
+
+        {% if services %}
+        <div class="home-services-grid">
+            {% for service in services|slice:":3" %}
+            <article class="home-service">
+                <a class="home-service-media" href="{% url 'service_detail' service.slug %}">
+                    {% if service.image and service.image.url %}
+                    <img src="{{ service.image.url }}" alt="{{ service.title }}">
+                    {% else %}
+                    <span class="home-service-placeholder"><i class="fa-solid fa-water"></i></span>
+                    {% endif %}
+                </a>
+                <div class="home-service-body">
+                    <h3><a href="{% url 'service_detail' service.slug %}">{{ service.title }}</a></h3>
+                    <p>{{ service.description|truncatewords:22 }}</p>
+                    <a class="home-service-link" href="{% url 'service_detail' service.slug %}">View service <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="home-services-action">
+            <a href="{% url 'services' %}" class="btn-professional">View all services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        {% else %}
+        <div class="home-services-empty">
+            <h3>Services coming soon</h3>
+            <p>Our marine and offshore service list will be published here.</p>
+            <a href="{% url 'contact-us' %}" class="btn-professional">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+.home-services {
+    background: #ffffff;
+    padding: 72px 0;
+}
+
+.home-services-heading {
+    max-width: 640px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.home-services-kicker {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF6B35;
+}
+
+.home-services-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0f172a;
+}
+
+.home-services-heading p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #64748b;
+}
+
+.home-services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.home-service {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 380px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home-service-media {
+    display: block;
+    height: 180px;
+    background: #eef3f8;
+    overflow: hidden;
+}
+
+.home-service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.home-service-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #003366;
+    font-size: 22px;
+}
+
+.home-service-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+}
+
+.home-service h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.home-service h3 a {
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.home-service h3 a:hover {
+    color: #003366;
+}
+
+.home-service-body p {
+    margin: 0 0 16px;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748b;
+}
+
+.home-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #003366;
+    text-decoration: none;
+}
+
+.home-service-link:hover {
+    color: #002244;
+}
+
+.home-services-action {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.home-services-empty {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+}
+
+.home-services-empty h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.home-services-empty p {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #64748b;
+}
+
+@media (max-width: 991px) {
+    .home-service {
+        max-width: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-services {
+        padding: 48px 0;
+    }
+
+    .home-services-title {
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+/* Services Section Styling */
+.vl-services-area {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+.vl-services-section-title .subtitle {
+    color: #0d6efd;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.vl-services-section-title .title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+.section-description {
+    color: #6c757d;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Service Card Styling */
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.05);
+}
+
+.service-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.service-placeholder i {
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 110, 253, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-overlay-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.service-overlay-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-overlay-content .category {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.service-tech {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.view-details-btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background: white;
+    color: #0d6efd;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffc107;
+    color: #212529;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Service Content Styling */
+.service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-title a {
+    color: #212529;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-title a:hover {
+    color: #0d6efd;
+}
+
+.service-description {
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.service-features {
+    margin-bottom: 20px;
+}
+
+.feature-item {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.service-type {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.type-standard {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+
+.type-premium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.type-custom {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.service-duration {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Coming Soon Section */
+.coming-soon-section {
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.coming-soon-icon {
+    margin-bottom: 25px;
+    color: #0d6efd;
+}
+
+.coming-soon-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.coming-soon-description {
+    color: #6c757d;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+}
+
+.coming-soon-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.coming-soon-features .feature-item {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.coming-soon-features .feature-item i {
+    color: #198754;
+    margin-right: 8px;
+}
+
+.explore-services-btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.explore-services-btn:hover {
+    background: #0b5ed7;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .vl-services-area {
+        padding: 80px 0;
+    }
+    
+    .vl-services-section-title .title {
+        font-size: 1.875rem;
+    }
+    
+    .service-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vl-services-area {
+        padding: 60px 0;
+    }
+    
+    .vl-services-section-title .title {
+        font-size: 1.5rem;
+        line-height: 1.33;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+    
+    .coming-soon-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .service-type, .service-duration {
+        width: 100%;
+    }
+}
+</style>
+
+<section class="why-choose-section">
+    <div class="container">
+        <div class="why-choose-heading">
+            <h2 class="why-kicker">Why Choose BW Tech Global</h2>
+            <h3 class="why-title">Setting Industry Standards in Marine Services</h3>
+        </div>
+
+        <div class="why-layout">
+            <div class="accordion why-reasons" id="whyChooseUs">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#whyOne" aria-expanded="true" aria-controls="whyOne">
+                            <span class="why-icon"><i class="fa-solid fa-award"></i></span>
+                            Certified Excellence
+                        </button>
+                    </h3>
+                    <div id="whyOne" class="accordion-collapse collapse show" data-bs-parent="#whyChooseUs">
+                        <div class="accordion-body">
+                            All our services are backed by international certifications and industry approvals from leading regulatory bodies including DNV, Bureau Veritas, and Lloyd's Register.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyTwo" aria-expanded="false" aria-controls="whyTwo">
+                            <span class="why-icon"><i class="fa-solid fa-user-shield"></i></span>
+                            Safety First Approach
+                        </button>
+                    </h3>
+                    <div id="whyTwo" class="accordion-collapse collapse" data-bs-parent="#whyChooseUs">
+                        <div class="accordion-body">
+                            Zero compromise on safety standards with comprehensive risk assessment protocols, regular safety audits, and advanced emergency response systems.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyThree" aria-expanded="false" aria-controls="whyThree">
+                            <span class="why-icon"><i class="fa-solid fa-clock"></i></span>
+                            24/7 Emergency Response
+                        </button>
+                    </h3>
+                    <div id="whyThree" class="accordion-collapse collapse" data-bs-parent="#whyChooseUs">
+                        <div class="accordion-body">
+                            Round-the-clock emergency services with rapid response teams ready to address urgent marine and offshore needs within 2 hours of notification.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyFour" aria-expanded="false" aria-controls="whyFour">
+                            <span class="why-icon"><i class="fa-solid fa-users"></i></span>
+                            Expert Team
+                        </button>
+                    </h3>
+                    <div id="whyFour" class="accordion-collapse collapse" data-bs-parent="#whyChooseUs">
+                        <div class="accordion-body">
+                            Our team comprises certified marine engineers, experienced divers, and offshore specialists with decades of combined industry experience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-points">
+                <article class="why-point">
+                    <span class="why-icon"><i class="fa-solid fa-hard-hat"></i></span>
+                    <h3>Safety Compliance</h3>
+                    <p>100% adherence to international safety standards and protocols</p>
+                </article>
+                <article class="why-point">
+                    <span class="why-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <h3>Quick Response</h3>
+                    <p>Emergency response within 2 hours, 24/7 availability</p>
+                </article>
+                <article class="why-point">
+                    <span class="why-icon"><i class="fa-solid fa-check-circle"></i></span>
+                    <h3>Quality Assurance</h3>
+                    <p>ISO 9001 certified processes and quality control systems</p>
+                </article>
+                <article class="why-point">
+                    <span class="why-icon"><i class="fa-solid fa-headset"></i></span>
+                    <h3>Expert Support</h3>
+                    <p>Professional technical support and consultation services</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-choose-section {
+        background: #f8fafc;
+        padding: 72px 0;
+    }
+
+    .why-choose-heading {
+        max-width: 640px;
+        margin-bottom: 28px;
+    }
+
+    .why-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #FF6B35;
+    }
+
+    .why-title {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #0f172a;
+    }
+
+    .why-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+        align-items: start;
+    }
+
+    .why-reasons,
+    .why-points {
+        display: grid;
+        gap: 12px;
+    }
+
+    .why-points {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-reasons.accordion {
+        --bs-accordion-border-width: 0;
+        --bs-accordion-bg: transparent;
+        --bs-accordion-btn-focus-box-shadow: none;
+        --bs-accordion-active-bg: #ffffff;
+        --bs-accordion-active-color: #0f172a;
+        --bs-accordion-btn-color: #0f172a;
+        display: grid;
+        gap: 12px;
+    }
+
+    .why-reasons .accordion-item {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .why-reasons .accordion-button {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px;
+        background: #ffffff;
+        color: #0f172a;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        box-shadow: none;
+    }
+
+    .why-reasons .accordion-button:not(.collapsed) {
+        background: #ffffff;
+        color: #0f172a;
+        box-shadow: none;
+    }
+
+    .why-reasons .accordion-button::after {
+        margin-left: auto;
+        width: 14px;
+        height: 14px;
+        background-size: 14px;
+    }
+
+    .why-reasons .accordion-body {
+        padding: 0 16px 16px 66px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #64748b;
+    }
+
+    .why-icon {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+        border-radius: 10px;
+        background: #eef3f8;
+        color: #003366;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .why-point h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #0f172a;
+    }
+
+    .why-point p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #64748b;
+    }
+
+    .why-point .why-icon {
+        margin-bottom: 12px;
+    }
+
+    @media (max-width: 991px) {
+        .why-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .why-choose-section {
+            padding: 48px 0;
+        }
+
+        .why-title {
+            font-size: 24px;
+            line-height: 1.33;
+        }
+
+        .why-points {
+            grid-template-columns: 1fr;
+        }
+
+        .why-reasons .accordion-button {
+            font-size: 15px;
+        }
+
+        .why-reasons .accordion-body {
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        .why-point h3 {
+            font-size: 15px;
+        }
+
+        .why-point p {
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+</style>
+<!-- Projects Showcase -->
+<!-- <section class="vl-causes-area sp2">
+    <div class="container">
+        <div class="vl-causes-section-title text-center">
+            <div class="vl-section-title-1 mb-60">
+                <h2 class="subtitle">Recent Projects</h2>
+                <h3 class="title text-anime-style-3">Our Success Stories</h3>
+                <p>
+                    Delivering excellence in underwater inspections, offshore maintenance, and marine logistics 
+                    for leading companies across West Africa.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image position-relative overflow-hidden">
+                        {% if project.image %}
+                        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                        {% else %}
+                        <img src="{% static 'assets/img/blog/vl-blg-1.1.png' %}" alt="Default Project" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                        {% endif %}
+                        <div class="project-overlay d-flex align-items-center justify-content-center">
+                            <div class="project-content text-center">
+                                <h4 class="text-white mb-2">{{ project.name }}</h4>
+                                <p class="text-light mb-3">{{ project.location }}</p>
+                                <a href="{% url 'project_detail' project.id %}" class="btn btn-sm btn-warning">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info p-4 bg-white shadow-sm">
+                        <h5 class="mb-2 fw-bold">{{ project.name }}</h5>
+                        <p class="text-muted mb-3 small">{{ project.description|truncatewords:15 }}</p>
+                        <div class="project-meta d-flex justify-content-between align-items-center text-sm">
+                            <span class="badge bg-primary">{{ project.status }}</span>
+                            <span class="text-muted">
+                                <i class="fa-solid fa-calendar me-1"></i>
+                                {% if project.date %}
+                                    {{ project.date|date:"M Y" }}
+                                {% else %}
+                                    Ongoing
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <div class="project-card p-5 bg-light rounded">
+                    <i class="fa-solid fa-folder-open display-1 text-muted mb-3"></i>
+                    <h4 class="text-muted">Projects Coming Soon</h4>
+                    <p class="text-muted">Our portfolio of successful projects will be available shortly.</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'projects' %}" class="btn btn-professional">View All Projects</a>
+        </div>
+    </div>
+</section> -->
+
+
+<section class="home-projects">
+    <div class="container">
+        <div class="home-projects-heading">
+            <h2 class="home-projects-kicker">Recent Projects</h2>
+            <h3 class="home-projects-title">Our Success Stories</h3>
+            <p>Delivering excellence in underwater inspections, offshore maintenance, and marine logistics for leading companies across West Africa.</p>
+        </div>
+
+        {% if projects %}
+        <div class="home-projects-grid">
+            {% for project in projects %}
+            <article class="home-project">
+                <a class="home-project-media" href="{% url 'project_detail' project.slug %}">
+                    {% if project.image and project.image.url %}
+                    <img src="{{ project.image.url }}" alt="{{ project.name }}">
+                    {% else %}
+                    <span class="home-project-placeholder"><i class="fa-solid fa-water"></i></span>
+                    {% endif %}
+                </a>
+                <div class="home-project-body">
+                    <div class="home-project-meta">
+                        {% if project.location %}
+                        <span><i class="fa-solid fa-location-dot"></i> {{ project.location }}</span>
+                        {% endif %}
+                        {% if project.date %}
+                        <span><i class="fa-solid fa-calendar"></i> {{ project.date|date:"M Y" }}</span>
+                        {% endif %}
+                    </div>
+                    <h3><a href="{% url 'project_detail' project.slug %}">{{ project.name }}</a></h3>
+                    <p>{{ project.short_description|truncatewords:22 }}</p>
+                    <a class="home-project-link" href="{% url 'project_detail' project.slug %}">View project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="home-projects-action">
+            <a href="{% url 'projects' %}" class="btn-professional">View all projects <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        {% else %}
+        <div class="home-projects-empty">
+            <h3>Projects coming soon</h3>
+            <p>Our portfolio of marine and offshore work will be published here.</p>
+            <a href="{% url 'services' %}" class="btn-professional">Explore our services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+    .home-projects {
+        background: #ffffff;
+        padding: 72px 0;
+    }
+
+    .home-projects-heading {
+        max-width: 640px;
+        margin: 0 auto 28px;
+        text-align: center;
+    }
+
+    .home-projects-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #FF6B35;
+    }
+
+    .home-projects-title {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #0f172a;
+    }
+
+    .home-projects-heading p {
+        margin: 10px 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #64748b;
+    }
+
+    .home-projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .home-project {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 300px;
+        max-width: 380px;
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .home-project-media {
+        display: block;
+        height: 180px;
+        background: #eef3f8;
+        overflow: hidden;
+    }
+
+    .home-project-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .home-project-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #003366;
+        font-size: 22px;
+    }
+
+    .home-project-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 16px;
+    }
+
+    .home-project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #64748b;
+    }
+
+    .home-project-meta i {
+        margin-right: 4px;
+        color: #003366;
+    }
+
+    .home-project h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .home-project h3 a {
+        color: #0f172a;
+        text-decoration: none;
+    }
+
+    .home-project h3 a:hover {
+        color: #003366;
+    }
+
+    .home-project-body p {
+        margin: 0 0 16px;
+        flex: 1;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #64748b;
+    }
+
+    .home-project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: auto;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #003366;
+        text-decoration: none;
+    }
+
+    .home-project-link:hover {
+        color: #002244;
+    }
+
+    .home-projects-action {
+        margin-top: 28px;
+        text-align: center;
+    }
+
+    .home-projects-empty {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 28px 20px;
+        text-align: center;
+        background: #f8fafc;
+        border: 1px solid rgba(226, 232, 240, 0.9);
+        border-radius: 12px;
+    }
+
+    .home-projects-empty h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    .home-projects-empty p {
+        margin: 0 0 16px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #64748b;
+    }
+
+    @media (max-width: 991px) {
+        .home-project {
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .home-projects {
+            padding: 48px 0;
+        }
+
+        .home-projects-title {
+            font-size: 24px;
+            line-height: 1.33;
+        }
+    }
+
+    /* Projects Section Styling */
+    .vl-causes-area {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+
+    .vl-section-title-1 .subtitle {
+        color: #FF6B35;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .vl-section-title-1 .title {
+        font-size: 1.875rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #003366;
+        margin-bottom: 15px;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Project Cards */
+    .project-card {
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .project-image {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-img {
+        transform: scale(1.05);
+    }
+
+    .project-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #003366, #00509E);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .project-placeholder i {
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,51,102,0.9) 100%);
+        display: flex;
+        align-items: flex-end;
+        padding: 25px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .project-overlay {
+        opacity: 1;
+    }
+
+    .project-overlay-content {
+        color: white;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-overlay-content {
+        transform: translateY(0);
+    }
+
+    .project-overlay-content h4 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .project-overlay-content .location {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-bottom: 10px;
+    }
+
+    .project-overlay-content .location i {
+        margin-right: 5px;
+    }
+
+    .project-tech {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .view-details-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #FF6B35;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .view-details-btn:hover {
+        background: #00509E;
+        transform: translateY(-2px);
+    }
+
+    .featured-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: #FF6B35;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .project-content {
+        padding: 25px;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+
+    .project-title a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .project-title a:hover {
+        color: #FF6B35;
+    }
+
+    .project-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+
+    .project-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+  
+
+
+    .project-date {
+        font-size: 0.8rem;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Coming Soon Section */
+    .coming-soon-section {
+        background: white;
+        border-radius: 20px;
+        padding: 60px 40px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        border: 2px dashed rgba(0,51,102,0.1);
+    }
+
+    .coming-soon-icon {
+        color: #003366;
+        margin-bottom: 25px;
+    }
+
+    .coming-soon-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 15px;
+    }
+
+    .coming-soon-description {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .coming-soon-features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 35px;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #003366;
+        font-weight: 500;
+    }
+
+    .feature-item i {
+        color: #FF6B35;
+        font-size: 0.9rem;
+    }
+
+    .explore-services-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #003366, #00509E);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .explore-services-btn:hover {
+        background: linear-gradient(135deg, #FF6B35, #FF8C42);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255,107,53,0.3);
+        color: white;
+    }
+
+  
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .vl-section-title-1 .title {
+            font-size: 1.5rem;
+            line-height: 1.33;
+        }
+
+       
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-overlay {
+            padding: 20px;
+        }
+    }
+
+   
+</style>
+<!-- Enhanced Testimonials -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="testimonials-heading">
+            <h2 class="testimonials-kicker">Client Testimonials</h2>
+            <h3 class="testimonials-title">What Our Clients Say</h3>
+            <p>Trusted by leading companies in the oil &amp; gas and maritime industries for our reliable and professional services.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote">"BW Tech Global provided exceptional underwater inspection services for our offshore platform. Their professionalism and attention to safety were impressive."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">DR</span>
+                    <div>
+                        <h4>David Richardson</h4>
+                        <p>Operations Manager, Oceanic Oil &amp; Gas</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote">"The marine logistics support from BW Tech has been outstanding. They consistently deliver on time and with the highest quality standards."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">SC</span>
+                    <div>
+                        <h4>Sophia Chen</h4>
+                        <p>Marine Engineer, Blue Horizon Shipping</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote">"Their offshore maintenance team handled our complex project with expertise and efficiency. Highly recommended for any marine operations."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">ME</span>
+                    <div>
+                        <h4>Mark Evans</h4>
+                        <p>Logistics Director, Neptune Marine</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Custom Professional Styles */
+:root {
+    --primary-blue: #003366;
+    --secondary-blue: #00509E;
+    --accent-orange: #FF6B35;
+    --light-blue: #E6F2FF;
+    --dark-blue: #002244;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+}
+
+.stats-section {
+    background: #ffffff;
+    padding: 28px 0 8px;
+    color: #0f172a;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.stat-item {
+    text-align: left;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #003366;
+    display: block;
+}
+
+.stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.vl-about-section.sp2,
+.vl-services-area.sp2 {
+    padding: 72px 0;
+}
+
+.vl-about-section .feature-box {
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    padding: 14px 16px;
+    height: 100%;
+}
+
+.vl-about-section .feature-box strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 8px;
+}
+
+.vl-about-section .feature-box p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.btn-professional {
+    background: #003366;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+}
+
+.btn-professional:hover {
+    background: #002244;
+    color: #ffffff;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    border: none;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--primary-blue);
+}
+
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,51,102,0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-image:hover .project-overlay {
+    opacity: 1;
+}
+
+.testimonials-section {
+    background: #f8fafc;
+    padding: 72px 0;
+}
+
+.testimonials-heading {
+    max-width: 640px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.testimonials-kicker {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF6B35;
+}
+
+.testimonials-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0f172a;
+}
+
+.testimonials-heading p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #64748b;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    color: #FF6B35;
+    font-size: 12px;
+}
+
+.testimonial-quote {
+    margin: 0;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748b;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 10px;
+    background: #eef3f8;
+    color: #003366;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.testimonial-author h4 {
+    margin: 0 0 2px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #0f172a;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #64748b;
+}
+
+@media (max-width: 991px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-section {
+        padding: 48px 0;
+    }
+
+    .testimonials-title {
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,51,102,0.8) 0%, rgba(0,34,68,0.9) 100%);
+}
+
+
+
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .vl-hero-section-title h1.vl-title {
+        font-size: 1.5rem;
+        line-height: 1.15;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat-number {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Animation for elements */
+[data-aos] {
+    transition: all 0.6s ease;
+}
+</style>
+
+
+
+<!--===== Certifications AREA STARTS =======-->
+<section class="vl-certifications-section sp1">
+  <div class="container">
+    <div class="vl-certifications-title mb-60 text-center">
+      <div class="vl-section-title-1">
+        <h2 class="title text-anime-style-3">We are Certified & Approved</h2>
+        <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          BW Tech Global Logistics Services PVT Limited holds various certifications and approvals to provide high-quality services to the marine, oil/gas, and underwater industries. 
+          Our company is fully registered and complies with the highest standards.
+        </p> 
+      </div>
+    </div>
+    <div class="row">
+      <div id="certificationsSlider" class="owl-carousel owl-theme">
+    <!-- Bureau Veritas -->
+    <div class="vl-certification-item">
+      <a href="https://marine-offshore.bureauveritas.com/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/bureau_veritas_group_logo.jpg'%}" alt="Bureau Veritas Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">Bureau Veritas Group</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- DNV -->
+    <div class="vl-certification-item">
+      <a href="https://www.dnv.com/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/dnvgl_logo.jpg'%}" alt="DNV Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">DNV</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- Lloyd's Register -->
+    <div class="vl-certification-item">
+      <a href="https://www.lr.org/en/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/logo.svg'%}" alt="Lloyd's Register Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">Lloyd's Register</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- INSB -->
+    <div class="vl-certification-item">
+      <a href="https://insb.gr/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/insblogo.png'%}" alt="INSB Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">INSB</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- American Bureau of Shipping -->
+    <div class="vl-certification-item">
+      <a href="https://ww2.eagle.org/en.html" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/1631300595407.jpg'%}" alt="American Bureau of Shipping Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">American Bureau of Shipping</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- NUPRC -->
+    <div class="vl-certification-item">
+      <a href="https://www.nuprc.gov.ng/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/NIGERIAN-UPSTREAM.png'%}" alt="NUPRC Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">NUPRC</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- VSLTEC -->
+    <div class="vl-certification-item" style="background: black;">
+      <a href="https://www.vsltec.com/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/vsltec.svg'%}" alt="VSLTEC Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title text-white">VSLTEC</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- ProcureShip -->
+    <div class="vl-certification-item">
+      <a href="https://www.procureship.com/home" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/procureship.svg'%}" alt="ProcureShip Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">ProcureShip</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- CleanQuote -->
+    <div class="vl-certification-item" style="background: black;">
+      <a href="https://cleanquote.com/cleaning-services/underwater-services/" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/cleanquote.svg'%}" alt="CleanQuote Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title text-white">CleanQuote</h4>
+        </div>
+      </a>
+    </div>
+
+    <!-- ClassNK -->
+    <div class="vl-certification-item">
+      <a href="https://www.classnk.de/appr_list/service_search.aspx?lang=en" target="_blank" class="certification-link">
+        <div class="vl-certification-logo">
+          <img class="w-100" src="{%static 'assets/img/team/classmnk.png'%}" alt="ClassNK Certification">
+        </div>
+        <div class="vl-certification-content text-center">
+          <h4 class="certification-title">Class NK</h4>
+        </div>
+      </a>
+    </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Certifications Section Styling */
+.vl-certifications-section {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.vl-certifications-title .title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.vl-certifications-title p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vl-certification-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    margin: 10px;
+}
+
+.vl-certification-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.vl-certification-logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.vl-certification-logo img {
+    max-height: 80px;
+    max-width: 180px;
+    width: auto;
+    object-fit: contain;
+}
+
+.certification-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #003366;
+    margin: 0;
+}
+
+/* Owl Carousel Customization */
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
+
+.owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-carousel .owl-nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    background: #003366 !important;
+    color: #ffffff !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+    background: #FF6B35 !important;
+    transform: scale(1.1);
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-carousel .owl-dot {
+    background: #ddd !important;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-dot.active {
+    background: #FF6B35 !important;
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .vl-certifications-section {
+        padding: 60px 0;
+    }
+    
+    .vl-certifications-title .title {
+        font-size: 2rem;
+    }
+    
+    .vl-certifications-title p {
+        font-size: 1rem;
+    }
+    
+    .vl-certification-item {
+        padding: 20px 15px;
+        margin: 5px;
+    }
+    
+    .vl-certification-logo {
+        height: 100px;
+    }
+    
+    .vl-certification-logo img {
+        max-height: 60px;
+        max-width: 140px;
+    }
+    
+    .certification-title {
+        font-size: 1rem;
+    }
+    
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .vl-certifications-title .title {
+        font-size: 1.75rem;
+    }
+    
+    .vl-certification-logo {
+        height: 80px;
+    }
+    
+    .vl-certification-logo img {
+        max-height: 50px;
+        max-width: 120px;
+    }
+}
+</style>
+
+<script>
+// Initialize Owl Carousel when document is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Owl Carousel is loaded
+    if (typeof jQuery !== 'undefined' && jQuery.fn.owlCarousel) {
+        $('#certificationsSlider').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                }
+            },
+            navText: [
+                '<i class="fa-solid fa-chevron-left"></i>',
+                '<i class="fa-solid fa-chevron-right"></i>'
+            ]
+        });
+    } else {
+        console.error('Owl Carousel is not loaded. Please make sure jQuery and Owl Carousel are included.');
+        
+        // Fallback: Display items in grid if carousel fails
+        document.getElementById('certificationsSlider').classList.add('certifications-grid-fallback');
+        
+        // Add fallback CSS
+        const fallbackCSS = `
+            .certifications-grid-fallback {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        `;
+        const style = document.createElement('style');
+        style.textContent = fallbackCSS;
+        document.head.appendChild(style);
+    }
+});
+
+// Alternative initialization without jQuery dependency
+function initializeCertificationsSlider() {
+    const slider = document.getElementById('certificationsSlider');
+    if (!slider) return;
+    
+    // Check if Owl Carousel is available
+    if (window.OwlCarousel || (window.jQuery && jQuery.fn.owlCarousel)) {
+        // Owl Carousel will be initialized by the code above
+        return;
+    }
+    
+    // Simple manual slider as fallback
+    console.log('Using fallback slider implementation');
+    
+    // Add basic slider functionality
+    slider.style.overflow = 'hidden';
+    slider.style.display = 'flex';
+    slider.style.gap = '20px';
+    slider.style.scrollBehavior = 'smooth';
+    slider.style.overflowX = 'auto';
+    slider.style.padding = '10px 0';
+    
+    // Hide scrollbar but keep functionality
+    slider.style.scrollbarWidth = 'none';
+    slider.style.msOverflowStyle = 'none';
+    
+    // Webkit scrollbar hide
+    const webkitScrollbarCSS = `
+        #certificationsSlider::-webkit-scrollbar {
+            display: none;
+        }
+    `;
+    const style = document.createElement('style');
+    style.textContent = webkitScrollbarCSS;
+    document.head.appendChild(style);
+}
+
+// Initialize fallback if needed
+document.addEventListener('DOMContentLoaded', initializeCertificationsSlider);
+</script>
+{%endblock content%}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Successful</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            animation: flip 2s linear infinite;
+        }
+
+        @keyframes flip {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = "/service/" + {{ service_id }};
+        }, 2000); // Redirect before flip completes
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">✔</div>
+        <div class="message">Thank You for Booking!</div>
+    </div>
+</body>
+</html>

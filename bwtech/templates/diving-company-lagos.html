@@ -1,0 +1,424 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Certified Diving Company in Lagos, Nigeria - BW Tech{% endblock %}
+{% block metadesc %}
+<meta name="description" content="Looking for IMCA-certified diving services in Lagos? BW Tech provides reliable commercial diving, underwater inspections, and subsea maintenance with rapid mobilization from Lagos Port.">
+{% endblock %}
+{% block content %}
+<style>
+    /* Professional Diving Services Styling */
+    
+    /* Breadcrumb Section */
+    .vl-breadcrumb {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: #ffffff;
+    }
+    
+    .vl-breadcrumb::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,34,68,0.8) 100%);
+    }
+    
+    .vl-breadcrumb > .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .vl-breadcrumb-title .heading {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .vl-breadcrumb-list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+        justify-content: center;
+    }
+    
+    .vl-breadcrumb-list a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .vl-breadcrumb-list a:hover,
+    .vl-breadcrumb-list a.active {
+        color: #FF6B35;
+    }
+    
+    .vl-breadcrumb-list .dvir {
+        color: rgba(255,255,255,0.6);
+    }
+    
+    /* Content Section */
+    .diving-content-section {
+        padding: 80px 0;
+        background: #ffffff;
+    }
+    
+    .diving-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .content-header {
+        text-align: center;
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .content-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .content-intro {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+    
+    .content-section {
+        margin-bottom: 40px;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border-left: 4px solid #003366;
+    }
+    
+    .content-section h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .content-section h2 i {
+        color: #FF6B35;
+        font-size: 1.5rem;
+    }
+    
+    .content-section p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+    
+    .highlight-box {
+        background: rgba(255,107,53,0.05);
+        border: 1px solid rgba(255,107,53,0.2);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 1.5rem 0;
+    }
+    
+    .highlight-box h4 {
+        color: #FF6B35;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .service-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #003366, #00509E);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+    
+    .service-link:hover {
+        background: linear-gradient(135deg, #FF6B35, #FF8C42);
+        transform: translateY(-2px);
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+    }
+    
+    .backlinks-section {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid #e9ecef;
+    }
+    
+    .backlinks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .backlink-item {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    
+    .backlink-item:hover {
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+    }
+    
+    .backlink-item a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        display: block;
+        padding: 10px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+    
+    .backlink-item a:hover {
+        background: #f8f9fa;
+        color: #0056b3;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 1200px) {
+        .content-header h1 {
+            font-size: 2.25rem;
+        }
+        
+        .content-section h2 {
+            font-size: 1.6rem;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .vl-breadcrumb {
+            padding: 80px 0;
+        }
+        
+        .vl-breadcrumb-title .heading {
+            font-size: 2.25rem;
+        }
+        
+        .diving-content-section {
+            padding: 60px 0;
+        }
+        
+        .content-header h1 {
+            font-size: 2rem;
+        }
+        
+        .content-section {
+            padding: 25px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .vl-breadcrumb {
+            padding: 60px 0;
+        }
+        
+        .vl-breadcrumb-title .heading {
+            font-size: 2rem;
+        }
+        
+        .diving-content-section {
+            padding: 50px 0;
+        }
+        
+        .content-header {
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+        }
+        
+        .content-header h1 {
+            font-size: 1.75rem;
+        }
+        
+        .content-intro {
+            font-size: 1.1rem;
+        }
+        
+        .content-section {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .content-section h2 {
+            font-size: 1.4rem;
+        }
+        
+        .content-section p {
+            font-size: 0.95rem;
+        }
+        
+        .backlinks-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .vl-breadcrumb {
+            padding: 50px 0;
+        }
+        
+        .vl-breadcrumb-title .heading {
+            font-size: 1.75rem;
+        }
+        
+        .vl-breadcrumb-list {
+            font-size: 0.9rem;
+        }
+        
+        .diving-content-section {
+            padding: 40px 0;
+        }
+        
+        .content-header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .content-intro {
+            font-size: 1rem;
+        }
+        
+        .content-section {
+            padding: 15px;
+        }
+        
+        .content-section h2 {
+            font-size: 1.25rem;
+        }
+        
+        .service-link {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+
+<!--===== BREADCRUMB AREA STARTS =======-->
+<section class="vl-breadcrumb" style="background-image: url({% static 'assets/img/breadcrumb/diving-services.jpg' %});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="vl-breadcrumb-title">
+          <h2 class="heading">Diving Company in Lagos, Nigeria</h2>
+            <div class="vl-breadcrumb-list">
+              <span><a href="{% url 'home' %}">Home</a></span>
+              <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+              <span><a href="{% url 'services' %}">Services</a></span>
+              <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+              <span><a class="active" href="#">Diving Company Lagos</a></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== BREADCRUMB AREA ENDS =======-->
+
+<!--===== DIVING CONTENT SECTION =======-->
+<section class="diving-content-section">
+    <div class="container">
+        <div class="diving-content">
+            <!-- Header Section -->
+            <div class="content-header">
+                <h1>Certified Diving Company in Lagos, Nigeria</h1>
+                <p class="content-intro">
+                    Professional IMCA-certified diving services for vessels and subsea assets in Lagos, Nigeria waters
+                </p>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="content-section">
+                <h2>
+                    <i class="fa-solid fa-water"></i>
+                    Reliable Diving Services in Lagos, Nigeria
+                </h2>
+                <p>
+                    When your vessel or subsea asset is in Nigerian waters, you can't afford delays or risk. The best Diving Company in Lagos must provide verified IMCA-certified divers, IACS approvals, and rapid mobilization from the Lagos Port area.
+                </p>
+                
+                <div class="highlight-box">
+                    <h4>Why Choose BW Tech in Lagos?</h4>
+                    <p>BW Tech is built on these principles, providing the most reliable commercial diving services you'll find locally. We understand the regulatory environment and deliver on time, every time.</p>
+                </div>
+                
+                <p>
+                    Do you want to see who else ranks? Here are other top diving companies in Lagos.
+                </p>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="content-section">
+                <h2>
+                    <i class="fa-solid fa-trophy"></i>
+                    Why Choose Us
+                </h2>
+                <p>
+                    BW Tech is the recognized leader in the region. We offer certified compliance and superior subsea maintenance capabilities. 
+                </p>
+                <a href="{% url 'service_detail' 'diving-company' %}" class="service-link">
+                    Learn about our full range of Commercial Diving Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <p style="margin-top: 20px;">
+                    See our services for the neighboring market: 
+                    <a href="{% url 'diving_company_cotonou' %}" style="color: #007bff; text-decoration: none; font-weight: 500;">
+                        Diving Company in Cotonou
+                    </a>
+                </p>
+            </div>
+
+            <!-- Backlinks Section -->
+            <div class="backlinks-section">
+                <h3>Other Links</h3>
+                <div class="backlinks-grid">
+                    <div class="backlink-item">
+                        <a href="https://www.shipserv.com/category/underwater-inspection-services/nigeria/lagos/NG-LOS/72" rel="nofollow">
+                            More Diving Companies in Lagos
+                        </a>
+                    </div>
+                    <div class="backlink-item">
+                        <a href="{% url 'service_detail' 'diving-company' %}">
+                            Commercial Diving Services - BW Tech
+                        </a>
+                    </div>
+                    <div class="backlink-item">
+                        <a href="{% url 'diving_company_cotonou' %}">
+                            Diving Company in Cotonou - BW Tech
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== DIVING CONTENT SECTION ENDS =======-->
+{% endblock %}

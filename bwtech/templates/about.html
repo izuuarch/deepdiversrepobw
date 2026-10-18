@@ -1,0 +1,1346 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}About BW Tech - Marine & Offshore Solutions Expertise{% endblock %}
+  {% block metadesc %}
+    <meta name="description" content="Learn about BW Tech: an indigenous marine and offshore solutions company. Our safety certifications, regional focus, and commitment to project success">
+    {% endblock %}
+
+{%block content%}
+<style>
+
+
+    
+    /* About Section */
+    .vl-about5 {
+        padding: 80px 0;
+    }
+    
+    .vl-section-title-1 .title {
+        font-size: 1.875rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        color: #003366;
+    }
+    
+    .vl-section-title-1 .subtitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #FF6B35;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .vl-section-title-1 p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+    
+    /* Image Styling */
+    .vl-sm-thumb, .vl-sm-thumb2, .large-thumb, .mision-thumb, .vission-thumb {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .vl-sm-thumb:hover, .vl-sm-thumb2:hover, .large-thumb:hover, .mision-thumb:hover, .vission-thumb:hover {
+        transform: translateY(-5px);
+    }
+    
+    .vl-sm-thumb img, .vl-sm-thumb2 img, .large-thumb img, .mision-thumb img, .vission-thumb img {
+        transition: transform 0.3s ease;
+    }
+    
+    .vl-sm-thumb:hover img, .vl-sm-thumb2:hover img, .large-thumb:hover img, .mision-thumb:hover img, .vission-thumb:hover img {
+        transform: scale(1.05);
+    }
+    
+    /* Icon List Styling */
+    .icon-list-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .icon-list-box li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #555;
+    }
+    
+    .icon-list-box li span {
+        margin-right: 12px;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+    
+    .icon-list-box li i {
+        /* color: #28a745; */
+        font-size: 14px;
+        background: rgba(40, 167, 69, 0.1);
+        padding: 4px;
+        border-radius: 50%;
+    }
+    
+    /* Mission & Vision Sections */
+    .vl-about-mission-bg, .vl-about-vission-bg {
+        background: #f8f9fa;
+        padding: 80px 0;
+    }
+    
+    .mission-content .title, .vl-vission-content .title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 1.5rem;
+    }
+    
+    .mission-content .para, .vl-vission-content p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Tab Styling */
+    .vl-vission-tab2 .nav-pills {
+        border-bottom: 1px solid #e9ecef;
+        margin-bottom: 1.5rem;
+    }
+    
+    .vl-vission-tab2 .nav-link {
+        background: transparent;
+        color: #666;
+        font-weight: 600;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 0;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .vl-vission-tab2 .nav-link.active {
+        color: #FF6B35;
+        background: transparent;
+        border-bottom: 2px solid #FF6B35;
+    }
+    
+    .vl-vission-tab2 .nav-link:hover {
+        color: #FF6B35;
+    }
+    
+    .vl-vission-tab2 .tab-content {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #666;
+    }
+    
+    /* Counter Section */
+    .vl-counter5 {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #002244 0%, #003366 100%);
+        color: #ffffff;
+    }
+    
+    .vl-counter5 .title {
+        color: #ffffff !important;
+    }
+    
+    .vl-counter5 .subtitle {
+        color: #FF6B35 !important;
+    }
+    
+    .vl-counter5 p {
+        color: rgba(255,255,255,0.9) !important;
+    }
+    
+    .single-counter-box {
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+    }
+    
+    .single-counter-box:hover {
+        background: rgba(255,255,255,0.15);
+        transform: translateY(-5px);
+    }
+    
+    .single-counter-box.active {
+        background: rgba(255,107,53,0.2);
+    }
+    
+    .single-counter-box .title {
+        font-size: 3rem;
+        font-weight: 800;
+        /* margin-bottom: 10px; */
+        color: #ffffff;
+    }
+    
+    .single-counter-box span {
+        /* font-size: 1rem; */
+        color: rgba(255,255,255,0.9);
+    }
+    
+    /* Testimonial Section */
+    .vl-testimonial4 {
+        padding: 80px 0;
+        background: #f8f9fa;
+    }
+    
+    .vl-section-title4 .title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 1rem;
+    }
+    
+    .vl-section-title4 .subtitle {
+        color: #FF6B35;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    
+    .slider-content-box {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        margin-bottom: 30px;
+    }
+    
+    .icon-box-bg {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .icon-box-bg:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .icon-box-bg.active {
+        background: linear-gradient(135deg, #003366, #00509E);
+        color: #ffffff;
+    }
+    
+    .icon-box-bg.active .title {
+        color: #ffffff;
+    }
+    
+    /* CTA Section */
+    .vl-cta {
+        padding: 80px 0;
+    }
+    
+    .vl-cta-bg {
+        background-size: cover;
+        background-position: center;
+        padding: 80px 0;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .vl-cta-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,34,68,0.8) 100%);
+    }
+    
+    .vl-cta-content {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+    }
+    
+    .vl-cta-content .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+    
+    .vl-cta-content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: rgba(255,255,255,0.9);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Button Styling */
+    .header-btn1 {
+        background: linear-gradient(135deg, #FF6B35, #FF8C42);
+        color: #ffffff;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+    }
+    
+    .header-btn1:hover {
+        background: linear-gradient(135deg, #00509E, #003366);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,80,158,0.4);
+        color: #ffffff;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 1200px) {
+    
+        
+        .vl-section-title-1 .title {
+            font-size: 1.875rem;
+        }
+        
+        .mission-content .title, .vl-vission-content .title {
+            font-size: 2rem;
+        }
+    }
+    
+    @media (max-width: 992px) {
+   
+        
+        .ml-20, .ml-50 {
+            margin-left: 0 !important;
+        }
+        
+        .vl-about-content2, .mission-content, .vl-vission-content {
+            margin-top: 40px;
+        }
+        
+        .vl-section-title-1 .title {
+            font-size: 1.5rem;
+            line-height: 1.33;
+        }
+        
+        .mission-content .title, .vl-vission-content .title {
+            font-size: 1.5rem;
+        }
+        
+        .vl-cta-content .title {
+            font-size: 2rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+       
+        
+      
+        
+        .vl-about5, .vl-about-mission-bg, .vl-about-vission-bg, .vl-counter5, .vl-testimonial4, .vl-cta {
+            padding: 60px 0;
+        }
+        
+        .vl-section-title-1 .title {
+            font-size: 1.5rem;
+            line-height: 1.33;
+        }
+        
+        .mission-content .title, .vl-vission-content .title {
+            font-size: 1.5rem;
+        }
+        
+        .vl-section-title-1 p, .mission-content .para, .vl-vission-content p {
+            font-size: 1rem;
+        }
+        
+        .single-counter-box .title {
+            font-size: 2.5rem;
+        }
+        
+        .vl-cta-content .title {
+            font-size: 1.75rem;
+        }
+        
+        .vl-cta-content p {
+            font-size: 1.1rem;
+        }
+        
+        .header-btn1 {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+        
+        .vl-vission-tab2 .nav-link {
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+      
+        
+        .vl-about5, .vl-about-mission-bg, .vl-about-vission-bg, .vl-counter5, .vl-testimonial4, .vl-cta {
+            padding: 50px 0;
+        }
+        
+        .vl-section-title-1 .title {
+            font-size: 1.5rem;
+        }
+        
+        .mission-content .title, .vl-vission-content .title {
+            font-size: 1.35rem;
+        }
+        
+        .vl-section-title-1 .subtitle, .vl-section-title4 .subtitle {
+            font-size: 0.9rem;
+        }
+        
+        .single-counter-box {
+            padding: 20px 15px;
+        }
+        
+        .single-counter-box .title {
+            font-size: 2rem;
+        }
+        
+        .single-counter-box span {
+            font-size: 0.9rem;
+        }
+        
+        .vl-cta-content .title {
+            font-size: 1.5rem;
+        }
+        
+        .vl-cta-content p {
+            font-size: 1rem;
+        }
+        
+        .header-btn1 {
+            padding: 10px 20px;
+            font-size: 13px;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .vl-vission-tab2 .nav-pills {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .vl-vission-tab2 .nav-link {
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+    
+        
+        .vl-section-title-1 .title {
+            font-size: 1.35rem;
+        }
+        
+        .mission-content .title, .vl-vission-content .title {
+            font-size: 1.25rem;
+        }
+        
+        .single-counter-box .title {
+            font-size: 1.75rem;
+        }
+        
+        .icon-list-box li {
+            font-size: 0.9rem;
+        }
+    }
+    
+    /* Animation Enhancements */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    
+    .vl-about-content,
+    .mission-content,
+    .vl-vission-content,
+    .vl-counter-content,
+    .vl-testimonial-content,
+    .vl-cta-content {
+        animation: fadeInUp 0.8s ease;
+    }
+</style>
+<style>
+  .vl-about-vission-bg {
+    background: #f8f9fa;
+    padding: 80px 0;
+  }
+
+  .vl-section-title-1 .subtitle {
+    color: #FF6B35;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .vl-section-title-1 .title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .section-intro {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
+
+  .timeline-layout {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .timeline-layout::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #FF6B35, #00509E, #28a745);
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-marker {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .mission-marker {
+    background: linear-gradient(135deg, #FF6B35, #FF8C42);
+  }
+
+  .vision-marker {
+    background: linear-gradient(135deg, #00509E, #003366);
+  }
+
+  .history-marker {
+    background: linear-gradient(135deg, #28a745, #20c997);
+  }
+
+  .timeline-content {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .timeline-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .timeline-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .vission-thumb {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+
+  .vission-thumb img {
+    transition: transform 0.3s ease;
+  }
+
+  .vission-thumb:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .vl-about-vission-bg {
+      padding: 60px 0;
+    }
+
+    .vl-section-title-1 {
+      font-size: 2.2rem;
+    }
+
+    .timeline-content {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .vl-section-title-1 {
+      font-size: 2rem;
+    }
+
+    .timeline-layout {
+      padding-left: 25px;
+    }
+
+    .timeline-layout::before {
+      left: 12px;
+    }
+
+    .timeline-marker {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+
+    .vission-thumb {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .vl-about-vission-bg {
+      padding: 50px 0;
+    }
+
+    .vl-section-title-1 {
+      font-size: 1.8rem;
+    }
+
+    .timeline-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .timeline-layout::before {
+      display: none;
+    }
+
+    .timeline-layout {
+      padding-left: 0;
+    }
+
+    .timeline-content {
+      text-align: center;
+    }
+  }
+</style>
+<style>
+  .vl-about5,
+  .vl-about-mission-bg,
+  .vl-about-vission-bg,
+  .vl-counter5,
+  .vl-cta {
+    padding: 72px 0;
+  }
+
+  .vl-about5 {
+    background: #ffffff;
+  }
+
+  .vl-about-mission-bg {
+    background: #f8fafc;
+  }
+
+  .vl-about-vission-bg {
+    background: #ffffff;
+  }
+
+  .vl-section-title-1 .subtitle,
+  .vl-section-title4 .subtitle,
+  .vl-counter5.counter-iner .vl-counter-content .vl-section-title-1 .subtitle {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF6B35;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .vl-section-title-1 .title,
+  .vl-about-mission-bg .mission-content .title,
+  .vl-vission-content .title,
+  .vl-counter5.counter-iner .vl-counter-content .vl-section-title-1 .title {
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0f172a !important;
+  }
+
+  .vl-section-title-1 p,
+  .vl-about-mission-bg .mission-content .para,
+  .vl-vission-content p,
+  .section-intro,
+  .vl-about5 .vl-about-content2 .content .para,
+  .vl-counter5.counter-iner .vl-counter-content .vl-section-title-1 .para {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #64748b !important;
+  }
+
+  .vl-about5 .vl-about-content2 .content .icon-list-box ul li,
+  .vl-about-mission-bg .icon-list-box ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748b;
+  }
+
+  .vl-about5 .vl-about-content2 .content .icon-list-box ul li span,
+  .vl-about-mission-bg .icon-list-box ul li span {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    background: transparent;
+    color: #003366;
+    line-height: 22px;
+  }
+
+  .vl-section-title-1.mb-50 {
+    margin-bottom: 28px;
+  }
+
+  .icon-list-box li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #64748b;
+  }
+
+  .icon-list-box li i {
+    color: #003366;
+    background: #eef3f8;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .vl-sm-thumb,
+  .vl-sm-thumb2,
+  .large-thumb,
+  .mision-thumb,
+  .vission-thumb {
+    border-radius: 12px;
+    box-shadow: none;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+  }
+
+  .timeline-layout {
+    padding-left: 0;
+  }
+
+  .timeline-layout::before {
+    display: none;
+  }
+
+  .timeline-item {
+    margin-bottom: 12px;
+  }
+
+  .timeline-content {
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: none;
+  }
+
+  .timeline-content:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .timeline-title {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #0f172a;
+  }
+
+  .timeline-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748b;
+  }
+
+  .vl-counter5 {
+    background: #ffffff;
+    color: #0f172a;
+  }
+
+  .vl-counter5 .vl-section-title-1 .title,
+  .vl-counter5 .subtitle {
+    color: #0f172a !important;
+  }
+
+  .vl-counter5 .subtitle {
+    color: #FF6B35 !important;
+  }
+
+  .vl-counter5 p {
+    color: #64748b !important;
+  }
+
+  .vl-counter5 .single-counter-box,
+  .vl-counter5 .single-counter-box.active {
+    text-align: left;
+    padding: 14px;
+    margin-bottom: 12px;
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .single-counter-box:hover {
+    transform: none;
+    background: #f8fafc;
+  }
+
+  .single-counter-box .title,
+  .vl-counter5 .single-counter-box .title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #003366 !important;
+    white-space: nowrap;
+  }
+
+  .vl-counter5 .single-counter-box .title .count-once {
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .vl-counter5 .single-counter-box > span,
+  .vl-counter5 .single-counter-box.active > span {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #64748b;
+  }
+
+  .vl-cta-bg {
+    border-radius: 12px;
+    padding: 48px 24px;
+  }
+
+  .vl-cta-content .title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+  }
+
+  .vl-cta-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .btn-area .header-btn1,
+  .vl-cta .header-btn1 {
+    background: #003366;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+  }
+
+  .btn-area .header-btn1:after,
+  .btn-area .header-btn1:hover:after,
+  .vl-cta .header-btn1:after,
+  .vl-cta .header-btn1:hover:after {
+    display: none;
+  }
+
+  .btn-area .header-btn1 span,
+  .vl-cta .header-btn1 span {
+    background: transparent;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    border-radius: 0;
+    color: inherit;
+  }
+
+  .btn-area .header-btn1 span i,
+  .vl-cta .header-btn1 span i {
+    transform: none;
+  }
+
+  .btn-area .header-btn1:hover,
+  .vl-cta .header-btn1:hover {
+    background: #002244;
+    color: #ffffff;
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+  }
+
+  .vl-cta .header-btn1 {
+    background: #ffffff;
+    color: #003366;
+    box-shadow: none;
+  }
+
+  .vl-cta .header-btn1:hover {
+    background: #f8fafc;
+    color: #002244;
+  }
+
+  @media (max-width: 576px) {
+    .vl-about5,
+    .vl-about-mission-bg,
+    .vl-about-vission-bg,
+    .vl-counter5,
+    .vl-cta {
+      padding: 48px 0;
+    }
+
+    .vl-section-title-1 .title,
+    .mission-content .title,
+    .vl-vission-content .title {
+      font-size: 24px;
+      line-height: 1.33;
+    }
+
+    .vl-cta-content .title {
+      font-size: 24px;
+    }
+
+    .single-counter-box .title,
+    .vl-counter5 .single-counter-box .title {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .timeline-item,
+    .timeline-content {
+      text-align: left;
+    }
+  }
+</style>
+
+<!--===== BREADCRUMB AREA STARTS =======-->
+<section class="vl-breadcrumb" style="background-image: url({%static 'assets/img/breadcrumb/pexels-pixabay.jpg'%});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="vl-breadcrumb-title">
+          <h2 class="heading">About Us</h2>
+            <div class="vl-breadcrumb-list">
+              <span><a href="{%url 'home'%}">Home</a></span>
+              <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+              <span><a class="active" href="#">About Us</a></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== BREADCRUMB AREA ENDS =======-->
+
+<!--===== ABOUT AREA STARTS =======-->
+<section class="vl-about5 sp2">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="vl-about-content">
+          <div class="vl-section-title-1 mb-50">
+            <h1 class="subtitle">About Us</h1>
+            <h3 class="title">Delivering Excellence in Marine and Industrial Services</h3>
+            <p>At BW Tech Global Logistics Services, we provide top-tier inspection, repair, and maintenance to ensure safety and efficiency in the marine, oil/gas, and underwater industries. With our certified expertise and client trust, we uphold the highest standards to safeguard operations and promote sustainability.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="vl-sm-thumb">
+                <img class="w-100" src="{%static 'assets/img/about/servizi-1.jpg'%}" alt="Marine Services">
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="vl-sm-thumb2">
+                <img class="w-100" src="{%static 'assets/img/about/lavori-subacquei-06.jpg'%}" alt="Underwater Works">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="vl-about-content2">
+          <div class="large-thumb mb-4">
+            <img class="w-100" src="{%static 'assets/img/about/lavori-subacquei-10.jpg'%}" alt="Professional Team">
+          </div>
+          <div class="content">
+            <p class="para mb-4">We offer a range of specialized services in the marine, oil/gas, and underwater industries, including:</p>
+
+            <div class="icon-list-box">
+              <ul>
+                <li><span><i class="fa-solid fa-check"></i></span>Underwater inspection and surveys of ships and offshore units</li>
+                <li><span><i class="fa-solid fa-check"></i></span>Hull cleaning, propeller polishing, and underwater maintenance</li>
+                <li><span><i class="fa-solid fa-check"></i></span>Pipeline and wellhead inspection and maintenance</li>
+                <li><span><i class="fa-solid fa-check"></i></span>SBM inspection, wreck removal, and underwater welding</li>
+                <li><span><i class="fa-solid fa-check"></i></span>Inspection and maintenance of storage tanks, life rafts, and fire extinguishers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== ABOUT AREA ENDS =======-->
+
+<!--===== MISSION AREA STARTS =======-->
+<section class="vl-about-mission-bg sp2">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="mision-thumb">
+          <img class="w-100" src="{%static 'assets/img/about/StockCake-Underwater Welding Art_1743265067.jpg'%}" alt="Underwater Welding">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mission-content">
+          <h2 class="title">Our Mission</h2>
+          <h3 class="para">Our mission is to deliver exceptional inspection, maintenance, and repair services that ensure safety, efficiency, and sustainability across all sectors we serve.</h3>
+          <p class="para">We aim to be the trusted partner for clients worldwide, enabling them to achieve operational excellence and long-term success.</p>
+
+          <div class="icon-list-box pt-4">
+            <ul>
+              <li><span><i class="fa-solid fa-check"></i></span>Delivering High-Quality Inspection and Maintenance Services</li>
+              <li><span><i class="fa-solid fa-check"></i></span>Promoting Sustainability and Safety Across Industries</li>
+              <li><span><i class="fa-solid fa-check"></i></span>Utilizing Cutting-Edge Technology and Expertise</li>
+              <li><span><i class="fa-solid fa-check"></i></span>Ensuring Operational Excellence for Our Clients</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== MISSION AREA ENDS =======-->
+
+<!--===== VISION AREA STARTS =======-->
+<!-- <section class="vl-about-vission-bg sp2">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="vission-thumb">
+          <img class="w-100" src="{%static 'assets/img/about/underwater-welding-work-stockcake.jpg'%}" alt="Underwater Operations">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="vl-vission-content">
+          <div class="vl-section-title-1">
+            <h2 class="subtitle">Our Mission & Vision</h2>
+            <h3 class="title">Our Purpose: Mission and Vision for a Sustainable Future</h3>
+            <p>We are committed to tackling the critical challenges facing these sectors, ensuring operational excellence and environmental responsibility.</p>
+          </div>
+      
+          <div class="vl-vission-tab2">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Our Mission</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Our Vision</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Our History</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                <p class="para">With dedication, integrity, and a commitment to quality, we strive to make a positive impact on the industries we serve, ensuring that every project we undertake contributes to sustainable practices and long-term success for our clients.</p>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                <p class="para">We aim to continue advancing technology and best practices in the industry, leading the way for safer and more effective solutions that drive long-term benefits for both our clients and the planet.</p>
+              </div>
+              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                <p class="para">We are proud to have established ourselves as a trusted partner, offering innovative solutions for complex challenges, and we are committed to continuing to evolve and grow in response to the dynamic needs of the industries we serve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!--===== VISION AREA ENDS =======-->
+<!--===== VISION AREA STARTS =======-->
+<section class="vl-about-vission-bg sp2">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="vission-thumb">
+          <img class="w-100" src="{%static 'assets/img/about/underwater-welding-work-stockcake.jpg'%}" alt="Underwater Operations">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="vl-vission-content">
+          <div class="vl-section-title-1">
+            <h5 class="subtitle">Our Mission & Vision</h5>
+            <h2 class="title">Our Purpose: Mission and Vision for a Sustainable Future</h2>
+            <p class="section-intro">We are committed to tackling the critical challenges facing these sectors, ensuring operational excellence and environmental responsibility.</p>
+          </div>
+      
+          <div class="timeline-layout">
+            <!-- Mission -->
+            <div class="timeline-item">
+              
+              <div class="timeline-content">
+                <h3 class="timeline-title">Our Mission</h3>
+                <p class="timeline-description">With dedication, integrity, and a commitment to quality, we strive to make a positive impact on the industries we serve, ensuring that every project we undertake contributes to sustainable practices and long-term success for our clients.</p>
+              </div>
+            </div>
+
+            <!-- Vision -->
+            <div class="timeline-item">
+             
+              <div class="timeline-content">
+                <h3 class="timeline-title">Our Vision</h3>
+                <p class="timeline-description">We aim to continue advancing technology and best practices in the industry, leading the way for safer and more effective solutions that drive long-term benefits for both our clients and the planet.</p>
+              </div>
+            </div>
+
+            <!-- History -->
+            <div class="timeline-item">
+            
+              <div class="timeline-content">
+                <h3 class="timeline-title">Our History</h3>
+                <p class="timeline-description">We are proud to have established ourselves as a trusted partner, offering innovative solutions for complex challenges, and we are committed to continuing to evolve and grow in response to the dynamic needs of the industries we serve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== VISION AREA ENDS =======-->
+
+
+
+<!--===== COUNTER AREA STARTS =======-->
+<section class="vl-counter5 counter-iner sp2">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="vl-counter-content">
+          <div class="vl-section-title-1">
+            <h2 class="subtitle">Company Statistics</h2>
+            <h2 class="title">Our Impact: Driven by Excellence and Commitment</h2>
+            <p class="para">Every project we undertake represents not only our dedication to safety and efficiency but also our commitment to making a real difference in the industries we serve.</p>
+
+            <div class="btn-area mt-4">
+              <a href="{%url 'contact-us'%}" class="header-btn1 text-center">Get in Touch <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-5">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="single-counter-box">
+              <h3 class="title"><span class="count-once" data-count="12">0</span>+</h3>
+              <span>Years of Industry Expertise</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="single-counter-box active">
+              <h3 class="title"><span class="count-once" data-count="69">0</span>+</h3>
+              <span>Projects Delivered Monthly</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="single-counter-box">
+              <h3 class="title"><span class="count-once" data-count="3">0</span>k+</h3>
+              <span>Global Clients Served</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="single-counter-box">
+              <h3 class="title"><span class="count-once" data-count="93">0</span>+</h3>
+              <span>Projects Successfully Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== COUNTER AREA ENDS =======-->
+
+<!--===== CTA AREA STARTS =======-->
+<section class="vl-cta">
+  <div class="container">
+    <div class="vl-cta-bg" style="background-image: url({%static 'assets/img/about/diver-sea-surrounded-by-archeological-building-ruins.jpg'%});">
+      <div class="row">
+        <div class="col-lg-8 mx-auto d-flex justify-content-center">
+          <div class="vl-cta-content text-center">
+            <h2 class="title">Get in Touch With Us</h2>
+            <p>Have questions or want to learn more about how you can help? We'd love to hear from you! Reach out to us today, and let's work together to make a positive impact.</p>
+            <div class="">
+              <div class="w-80 btn-area">
+                <a href="{%url 'contact-us'%}" class="header-btn1">Contact Us <span><i class="fa-solid fa-arrow-right"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== CTA AREA ENDS =======-->
+<script>
+(function () {
+  var nodes = document.querySelectorAll(".vl-counter5 .count-once");
+  if (!nodes.length) return;
+
+  function showFinal(el) {
+    el.textContent = el.getAttribute("data-count");
+  }
+
+  function countOnce(el) {
+    if (el.getAttribute("data-counted") === "1") return;
+    el.setAttribute("data-counted", "1");
+    var target = parseInt(el.getAttribute("data-count"), 10);
+    if (!target && target !== 0) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      showFinal(el);
+      return;
+    }
+    var duration = 1400;
+    var start = null;
+    function frame(now) {
+      if (start === null) start = now;
+      var progress = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = String(Math.round(target * eased));
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.textContent = String(target);
+      }
+    }
+    el.textContent = "0";
+    requestAnimationFrame(frame);
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    nodes.forEach(showFinal);
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      countOnce(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.6 });
+
+  nodes.forEach(function (el) {
+    observer.observe(el);
+  });
+})();
+</script>
+{%endblock content %}

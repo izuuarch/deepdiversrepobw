@@ -1,0 +1,1 @@
+from deepdivers.wsgi import application

@@ -1,0 +1,684 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}Full Marine & Offshore Solutions Service Portfolio{% endblock %}
+  {% block metadesc %}
+    <meta name="description" content="Our full range of subsea, diving, and marine services. Specialized support for oil & gas, logistics, and maritime infrastructure in West Africa.">
+    {% endblock %}
+{% block content %}
+<style>
+  /* Services Hero Section */
+  .services-hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    text-align: center;
+  }
+
+  .services-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .services-hero-content .subtitle {
+    color: #FF6B35;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .services-hero-content .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .services-hero-content .description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-item h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 8px;
+  }
+
+  .stat-item span {
+    color: #666;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Services Grid Section */
+  .services-grid-section {
+    padding: 80px 0;
+  }
+
+  /* Modern Service Cards - FIXED WIDTH ISSUES */
+  .service-card-modern {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .service-card-modern:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  }
+
+  .service-card-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .service-icon-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #003366, #00509E);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+
+  .service-icon-wrapper i {
+    color: #ffffff;
+    font-size: 26px;
+  }
+
+  .service-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .service-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .service-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #003366, #00509E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .service-card-modern:hover .service-image-wrapper img {
+    transform: scale(1.08);
+  }
+
+  .service-card-body {
+    padding: 30px;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .service-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+  }
+
+  .service-title a:hover {
+    color: #FF6B35;
+  }
+
+  .service-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .service-features {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .feature-tag {
+    background: rgba(0,51,102,0.08);
+    color: #003366;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .service-card-footer {
+    padding: 0 30px 30px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #FF6B35;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .service-link:hover {
+    color: #003366;
+    gap: 15px;
+  }
+
+  /* Why Choose Us Section */
+  .why-choose-section {
+    padding: 80px 0;
+  }
+
+  .feature-card {
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    width: 100%;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  }
+
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #003366, #00509E);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+  }
+
+  .feature-icon i {
+    color: #ffffff;
+    font-size: 32px;
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+  }
+
+  .feature-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+  }
+
+  /* Section Header */
+  .section-header .subtitle {
+    color: #FF6B35;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .section-header .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+
+  .section-header .section-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+    word-wrap: break-word;
+  }
+
+  /* CTA Section */
+  .vl-cta-bg {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vl-cta-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,51,102,0.92) 0%, rgba(0,34,68,0.85) 100%);
+  }
+
+  .vl-cta-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+  }
+
+  .vl-cta-content .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    word-wrap: break-word;
+  }
+
+  .vl-cta-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: rgba(255,255,255,0.9);
+    word-wrap: break-word;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .secondary-btn {
+    background: transparent !important;
+    border: 2px solid rgba(255,255,255,0.3) !important;
+  }
+
+  .secondary-btn:hover {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: rgba(255,255,255,0.5) !important;
+  }
+
+  /* No Services State */
+  .no-services {
+    padding: 80px 20px;
+    color: #666;
+  }
+
+  .no-services i {
+    color: #003366;
+    margin-bottom: 25px;
+  }
+
+  /* Grid Layout Fixes */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+  }
+
+  @media (max-width: 1200px) {
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+  }
+
+  @media (max-width: 992px) {
+    .services-hero-content .title {
+      font-size: 2.5rem;
+    }
+    
+    .section-header .section-title {
+      font-size: 2.2rem;
+    }
+    
+    .vl-cta-content .title {
+      font-size: 2.2rem;
+    }
+
+    .hero-stats {
+      gap: 40px;
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services-hero-section {
+      padding: 80px 0;
+    }
+    
+    .services-hero-content .title {
+      font-size: 2.2rem;
+    }
+
+    .services-hero-content .description {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .stat-item h3 {
+      font-size: 2.2rem;
+    }
+
+    .service-card-header {
+      height: 180px;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .cta-buttons .header-btn1 {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .service-card-body, .service-card-footer {
+      padding: 25px;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .services-hero-content .title {
+      font-size: 2rem;
+    }
+
+    .services-hero-content .description {
+      font-size: 1rem;
+    }
+
+    .section-header .section-title {
+      font-size: 2rem;
+    }
+
+    .vl-cta-content .title {
+      font-size: 2rem;
+    }
+
+    .vl-cta-content p {
+      font-size: 1.1rem;
+    }
+
+    .service-card-body, .service-card-footer {
+      padding: 20px;
+    }
+
+    .feature-card {
+      padding: 30px 20px;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!--===== BREADCRUMB AREA STARTS =======-->
+<section class="vl-breadcrumb" style="background-image: url({% static 'assets/img/breadcrumb/CLU02386.jpg' %});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="vl-breadcrumb-title">
+          <h2 class="heading">Our Services</h2>
+          <div class="vl-breadcrumb-list">
+            <span><a href="{% url 'home' %}">Home</a></span>
+            <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+            <span><a class="active" href="#">Our Services</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== BREADCRUMB AREA ENDS =======-->
+
+<!--===== SERVICES HERO SECTION =======-->
+<section class="services-hero-section sp2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="services-hero-content text-center">
+          <h2 class="subtitle">Professional Solutions</h2>
+          <h3 class="title">Comprehensive Marine & Offshore Services</h3>
+          <p class="description">
+            BW Tech Global delivers expert marine, offshore, and underwater services with uncompromising safety standards and cutting-edge technology. Trust our experienced team for your most challenging projects.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>50+</h3>
+              <span>Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <h3>12+</h3>
+              <span>Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <h3>24/7</h3>
+              <span>Emergency Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--===== SERVICES GRID SECTION =======-->
+<section class="services-grid-section sp2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-header text-center mb-60">
+          <h2 class="subtitle">Our Expertise</h2>
+          <h3 class="section-title">Professional Marine Services</h3>
+          <p class="section-description">
+            We offer a comprehensive range of marine and offshore services tailored to meet the unique demands of your industry.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="row services-grid">
+      {% for service in services %}
+      <div class="col-xl-4 col-lg-6 col-md-6 mb-4 service-item">
+        <div class="service-card-modern">
+          <div class="service-card-header">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid {{ service.icon|default:'fa-water' }}"></i>
+            </div>
+            {% if service.image %}
+            <div class="service-image-wrapper">
+              <img src="{{ service.image.url }}" alt="{{ service.title }}" class="img-fluid">
+            </div>
+            {% else %}
+            <div class="service-image-placeholder">
+              <i class="fa-solid fa-water fa-3x"></i>
+            </div>
+            {% endif %}
+          </div>
+          <div class="service-card-body">
+            <h4 class="service-title"><a href="{% url 'service_detail' service.slug %}">{{ service.title }}</a></h4>
+            <p class="service-description">{{ service.short_description|default:service.description|truncatewords:25 }}</p>
+            <div class="service-features">
+              <span class="feature-tag">Expert Team</span>
+              <span class="feature-tag">Advanced Equipment</span>
+            </div>
+          </div>
+          <div class="service-card-footer">
+            <a href="{% url 'service_detail' service.slug %}" class="service-link">
+              <span>Learn More</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-lg-12">
+        <div class="no-services text-center">
+          <i class="fa-solid fa-tools fa-3x mb-3"></i>
+          <h3>No Services Available</h3>
+          <p>Please check back later for our service offerings.</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!--===== WHY CHOOSE US SECTION =======-->
+<section class="why-choose-section sp2 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-header text-center mb-60">
+          <h2 class="subtitle">Why Choose Us</h2>
+          <h3 class="section-title">Excellence in Marine Services</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="feature-title">Safety First</h4>
+          <p class="feature-description">We prioritize safety in all operations with rigorous protocols and continuous training.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+          <h4 class="feature-title">Advanced Technology</h4>
+          <p class="feature-description">Utilizing state-of-the-art equipment and innovative solutions for optimal results.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h4 class="feature-title">Expert Team</h4>
+          <p class="feature-description">Our certified professionals bring decades of combined experience to every project.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--===== CTA AREA STARTS =======-->
+<section class="vl-cta" style="margin-bottom: 30px;">
+  <div class="container">
+    <div class="vl-cta-bg" style="background-image: url({% static 'assets/img/cta/service-cta-bg.jpg' %});">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="vl-cta-content text-center">
+            <h2 class="title">Ready to Start Your Project?</h2>
+            <p>Contact our expert team today to discuss your marine and offshore service requirements. We're here to provide innovative solutions for your most complex challenges.</p>
+            <div class="cta-buttons">
+              <a href="{% url 'contact-us' %}" class="header-btn1">Get Free Quote</a>
+              <a href="tel:+2348171409641" class="header-btn1 secondary-btn">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== CTA AREA ENDS =======-->
+
+{% endblock %}

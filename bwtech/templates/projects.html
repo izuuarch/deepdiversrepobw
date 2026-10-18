@@ -1,0 +1,972 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Marine & Offshore Project Portfolio - BW Tech Global{% endblock %}
+{% block metadesc %}
+<meta name="description" content="View BW Tech Global's verified portfolio of subsea, diving, and marine construction projects delivered across major West African ports and offshore fields.">
+{% endblock %}
+
+{% block content %}
+<style>
+  /* Projects Hero Section */
+  .projects-hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    text-align: center;
+  }
+
+  .projects-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .projects-hero-content .subtitle {
+    color: #FF6B35;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .projects-hero-content .title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+  }
+
+  .projects-hero-content .description {
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-stats {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .stat-item h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 8px;
+  }
+
+  .stat-item span {
+    color: #666;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Projects Grid Section */
+  .projects-grid-section {
+    padding: 80px 0;
+  }
+
+  .section-header .subtitle {
+    color: #FF6B35;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .section-header .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+
+  .section-header .section-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Project Cards - FIXED WIDTH & RESPONSIVE */
+  .project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+
+  .project-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+
+  .project-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #003366, #00509E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-info {
+    color: white;
+  }
+
+  .project-location, .project-date {
+    display: block;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+  }
+
+  .project-location i, .project-date i {
+    margin-right: 5px;
+    font-size: 0.7rem;
+  }
+
+  .project-actions {
+    text-align: right;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #FF6B35;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+  }
+
+  .project-link:hover {
+    background: #00509E;
+    transform: scale(1.1);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #FF6B35;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .project-content {
+    padding: 25px;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+
+  .project-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .project-title a:hover {
+    color: #FF6B35;
+  }
+
+  .project-description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    /* word-wrap: break-word; */
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .project-status, .project-tech {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .status-completed {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+  }
+
+  .status-ongoing {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+  }
+
+  .status-planning {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+    border: 1px solid rgba(108, 117, 125, 0.3);
+  }
+
+  .project-tech {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    border: 1px solid rgba(0, 123, 255, 0.3);
+  }
+
+  .project-read-more {
+    color: #FF6B35;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .project-read-more:hover {
+    color: #003366;
+    gap: 12px;
+  }
+
+  /* No Projects State */
+  .no-projects {
+    padding: 60px 20px;
+    color: #666;
+  }
+
+  .no-projects i {
+    color: #003366;
+    margin-bottom: 20px;
+  }
+
+  /* Pagination */
+  .projects-pagination {
+    margin-top: 50px;
+  }
+
+  .projects-pagination .pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .projects-pagination .page-link {
+    color: #003366;
+    border: 1px solid rgba(0,51,102,0.2);
+    padding: 8px 14px;
+    margin: 2px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .projects-pagination .page-item.active .page-link {
+    background: #003366;
+    border-color: #003366;
+    color: white;
+  }
+
+  .projects-pagination .page-link:hover {
+    background: rgba(0,51,102,0.1);
+    border-color: #003366;
+  }
+
+  /* CTA Section */
+  .vl-cta-bg {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vl-cta-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,34,68,0.85) 100%);
+  }
+
+  .vl-cta-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+  }
+
+  .vl-cta-content .title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .vl-cta-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .secondary-btn {
+    background: transparent !important;
+    border: 2px solid rgba(255,255,255,0.3) !important;
+  }
+
+  .secondary-btn:hover {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: rgba(255,255,255,0.5) !important;
+  }
+
+  /* Mobile Responsive Fixes */
+  @media (max-width: 768px) {
+    .projects-hero-section {
+      padding: 60px 0;
+    }
+    
+    .projects-hero-content .title {
+      font-size: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .projects-hero-content .description {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .project-stats {
+      gap: 30px;
+    }
+
+    .stat-item {
+      min-width: 100px;
+    }
+
+    .stat-item h3 {
+      font-size: 1.8rem;
+    }
+
+    .stat-item span {
+      font-size: 0.8rem;
+    }
+
+    .section-header .section-title {
+      font-size: 1.8rem;
+    }
+
+    .project-card {
+      max-width: 100%;
+      margin: 0 10px;
+    }
+
+    .project-image {
+      height: 200px;
+    }
+
+    .project-overlay {
+      opacity: 1;
+      padding: 12px;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cta-buttons .header-btn1 {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .vl-cta-content .title {
+      font-size: 1.8rem;
+    }
+
+    .vl-cta-content p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .projects-hero-content .title {
+      font-size: 1.5rem;
+      line-height: 1.15;
+    }
+
+    .project-stats {
+      gap: 20px;
+    }
+
+    .stat-item {
+      min-width: 80px;
+    }
+
+    .stat-item h3 {
+      font-size: 1.6rem;
+    }
+
+    .section-header .section-title {
+      font-size: 1.6rem;
+    }
+
+    .project-image {
+      height: 180px;
+    }
+
+    .project-content {
+      padding: 18px;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+    }
+
+    .project-description {
+      font-size: 0.85rem;
+      /* -webkit-line-clamp: 2; */
+    }
+
+    .projects-pagination .page-link {
+      padding: 6px 10px;
+      font-size: 0.8rem;
+    }
+
+    .vl-cta-bg {
+      padding: 60px 0;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .project-card {
+      margin: 0 5px;
+    }
+    
+    .project-content {
+      padding: 15px;
+    }
+    
+    .project-meta {
+      gap: 6px;
+    }
+    
+    .project-status, .project-tech {
+      font-size: 0.65rem;
+      padding: 3px 8px;
+    }
+  }
+</style>
+<style>
+  .projects-hero-section,
+  .projects-grid-section,
+  .vl-cta {
+    padding: 72px 0;
+  }
+
+  .projects-hero-section {
+    background: #ffffff;
+  }
+
+  .projects-grid-section {
+    background: #f8fafc;
+  }
+
+  .projects-hero-content .subtitle,
+  .section-header .subtitle {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF6B35;
+  }
+
+  .projects-hero-content .title,
+  .section-header .section-title {
+    margin: 0 0 12px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #0f172a;
+  }
+
+  .projects-hero-content .description,
+  .section-header .section-description {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #64748b;
+  }
+
+  .section-header.mb-60 {
+    margin-bottom: 28px;
+  }
+
+  .project-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+    justify-content: stretch;
+  }
+
+  .project-stats .stat-item {
+    min-width: 0;
+    background: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: left;
+  }
+
+  .project-stats .stat-item h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #003366;
+  }
+
+  .project-stats .stat-item span {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #64748b;
+  }
+
+  .project-card {
+    max-width: none;
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-content {
+    padding: 16px;
+  }
+
+  .project-title {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #0f172a;
+    text-align: left;
+  }
+
+  .project-description {
+    margin: 0 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #64748b;
+    text-align: left;
+  }
+
+  .project-read-more,
+  .project-read-more.btn-professional {
+    width: 100%;
+    background: #003366;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    gap: 8px;
+  }
+
+  .project-read-more:hover {
+    background: #002244;
+    color: #ffffff;
+    gap: 8px;
+  }
+
+  .projects-pagination .page-link {
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .vl-cta-bg {
+    border-radius: 12px;
+    padding: 48px 24px;
+  }
+
+  .vl-cta-content .title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+  }
+
+  .vl-cta-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .cta-buttons .header-btn1 {
+    background: #ffffff;
+    color: #003366;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-buttons .header-btn1:hover {
+    background: #f8fafc;
+    color: #002244;
+  }
+
+  .cta-buttons .secondary-btn,
+  .cta-buttons .secondary-btn:hover {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    box-shadow: none;
+  }
+
+  @media (max-width: 576px) {
+    .projects-hero-section,
+    .projects-grid-section,
+    .vl-cta {
+      padding: 48px 0;
+    }
+
+    .projects-hero-content .title,
+    .section-header .section-title,
+    .vl-cta-content .title {
+      font-size: 24px;
+      line-height: 1.33;
+    }
+
+    .project-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .project-stats .stat-item h3 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .project-title {
+      font-size: 16px;
+    }
+
+    .project-description {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<!--===== BREADCRUMB AREA STARTS =======-->
+<section class="vl-breadcrumb" style="background-image: url({% static 'assets/img/breadcrumb/pexels-kindelmedia-8849656.jpg' %});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="vl-breadcrumb-title">
+          <h2 class="heading">Our Projects</h2>
+          <div class="vl-breadcrumb-list">
+            <span><a href="{% url 'home' %}">Home</a></span>
+            <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+            <span><a class="active" href="#">Our Projects</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== BREADCRUMB AREA ENDS =======-->
+
+<!-- Projects Hero Section -->
+<section class="projects-hero-section sp2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="projects-hero-content text-center">
+          <h2 class="subtitle">Our Portfolio</h2>
+          <h3 class="title">Successfully Delivered Marine & Offshore Projects</h3>
+          <p class="description">
+            Explore our portfolio of completed projects showcasing our expertise in marine engineering, 
+            underwater services, and offshore solutions across West Africa.
+          </p>
+          <div class="project-stats">
+            <div class="stat-item">
+              <h3>150+</h3>
+              <span>Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <h3>12+</h3>
+              <span>Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <span>Client Locations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Grid Section -->
+<section class="projects-grid-section sp2 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-header text-center mb-60">
+          <h2 class="subtitle">Our Work</h2>
+          <h3 class="section-title">Featured Projects</h3>
+          <p class="section-description">
+            Browse through our successfully completed projects that demonstrate our commitment to 
+            quality, safety, and innovation in marine and offshore services.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      {% for project in page_obj %}
+      <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12 mb-4">
+        <div class="project-card">
+          <div class="project-image">
+            {% if project.image and project.image.url %}
+            <img src="{{ project.image.url }}" alt="{{ project.name }}">
+            {% else %}
+            <div class="project-placeholder">
+              <i class="fa-solid fa-water fa-3x"></i>
+            </div>
+            {% endif %}
+            <div class="project-overlay">
+              <div class="project-info">
+                <span class="project-location"><i class="fa-solid fa-location-dot"></i> {{ project.location }}</span>
+                <span class="project-date"><i class="fa-solid fa-calendar"></i> {{ project.date|date:"M Y" }}</span>
+              </div>
+              <div class="project-actions">
+                <a href="{% url 'project_detail' project.slug %}" class="project-link">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            {% if project.featured %}
+            <div class="featured-badge">Featured</div>
+            {% endif %}
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <a href="{% url 'project_detail' project.slug %}">{{ project.name }}</a>
+            </h3>
+            <p class="project-description text-center">{{ project.short_description }}</p>
+         
+            <a href="{% url 'project_detail' project.slug %}" class="btn-professional project-read-more d-flex justify-content-center">
+              View Project Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-lg-12">
+        <div class="no-projects text-center">
+          <i class="fa-solid fa-folder-open fa-3x mb-3"></i>
+          <h3>No Projects Available</h3>
+          <p>Please check back later for our project portfolio.</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if page_obj.has_other_pages %}
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="projects-pagination text-center">
+          <nav>
+            <ul class="pagination">
+              {% if page_obj.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </a>
+              </li>
+              {% endif %}
+
+              {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <li class="page-item active">
+                  <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                </li>
+                {% endif %}
+              {% endfor %}
+
+              {% if page_obj.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="vl-cta" style="margin-bottom: 30px;">
+  <div class="container">
+    <div class="vl-cta-bg" style="background-image: url({% static 'assets/img/cta/pexels-pin.jpg' %});">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="vl-cta-content text-center">
+            <h2 class="title">Ready to Start Your Project?</h2>
+            <p>Partner with BW Tech Global for your next marine or offshore project. Our experienced team is ready to deliver exceptional results.</p>
+            <div class="cta-buttons">
+              <a href="{% url 'contact-us' %}" class="header-btn1">Start a Project</a>
+              <a href="tel:+2348171409641" class="header-btn1 secondary-btn">Call Our Experts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

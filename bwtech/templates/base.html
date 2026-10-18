@@ -1,0 +1,1814 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BW Tech Global - Leading Underwater Inspection & Diving Services{% endblock %}</title>
+    {% block metadesc %}
+    <meta name="description" content=" BW Tech Global provides expert underwater inspection and diving services in Nigeria, Ghana, Ivory Coast, and across West Africa.">
+    {% endblock %}
+  <!-- Structured Data Markup for Rich Results -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BW Tech Global",
+    "alternateName": "BW Tech",
+    "url": "https://bwtechglobal.com",
+    "logo": "https://bwtechglobal.com/static/assets/img/logo/BW_TECH_LOGO.png",
+    "description": "Leading underwater inspection and diving services company providing expert commercial diving, marine services, and underwater inspections across West Africa.",
+   "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "15, Creek Road, Apapa, Lagos State, Nigeria",
+            "addressLocality": "Lagos",
+            "addressRegion": "Lagos",
+            "postalCode": "100001",
+            "addressCountry": "NG"
+        },
+     "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+234-817-140-9641",
+            "contactType": "customer service",
+            "email": "support@bwtechglobal.com",
+            "contactOption": "TollFree",
+            "areaServed": ["NG", "GH", "CI", "SN", "BJ", "TG"],
+            "availableLanguage": ["en"]
+        },
+    "sameAs": [
+        "https://www.facebook.com/bwtechglobal",
+        "https://www.linkedin.com/company/bwtechglobal",
+        "https://twitter.com/bwtechglobal"
+    ],
+     "areaServed": [
+            {
+                "@type": "City",
+                "name": "Lagos",
+                "address": {
+                    "@type": "15, Creek Road, Apapa, Lagos State, Nigeria",
+                    "addressCountry": "NG"
+                }
+            },
+            {
+                "@type": "City",
+                "name": "Abidjan", 
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "CI"
+                }
+            },
+            {
+                "@type": "City",
+                "name": "Ghana",
+                "address": {
+                    "@type": "Old SFC Building Room 22/23 Fishing Harbour Accra, Ghana", 
+                    "addressCountry": "GH"
+                }
+            },
+            {
+                "@type": "City",
+                "name": "Lome",
+                "address": {
+                    "@type": "ADAWLATO 18 Rue ANGLE AV DE LA LIBERATION ET RUE DU GRAND MARCHE LOME, Togo",
+                    "addressCountry": "TG"
+                }
+            },
+            {
+                "@type": "City",
+                "name": "Conakry",
+                "address": {
+                    "@type": "Coleah Domino By Total Fuel Station Conakry, Guinea",
+                    "addressCountry": "GN"
+                }
+            },
+            {
+                "@type": "City",
+                "name": "Dakar",
+                "address": {
+                    "@type": "Dakar Port mole 10 Quai de pêche Dakar, Senegal",
+                    "addressCountry": "SN"
+                }
+            }
+        ],
+        "serviceType": [
+            "Commercial Diving Services",
+            "Underwater Inspections",
+            "Marine Construction",
+            "In-Water Surveys",
+            "Underwater Maintenance",
+            "Marine Engineering"
+        ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BW Tech Global",
+    "url": "https://bwtechglobal.com",
+    "description": "Leading underwater inspection and diving services company serving West Africa.",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bwtechglobal.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    "inLanguage": "en"
+}
+</script>
+    {% block seo_meta %}
+    <meta name="keywords" content="Diving Company in Lagos, Underwater Inspection Company in Nigeria, Diving Company in Ghana, Underwater Inspection Company in Ivory Coast, Underwater Inspection Company in Senegal, Diving Company in Togo, Diving Company in Gabon, Diving Company in Liberia">
+    <meta name="author" content="BW Tech Global">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bwtechglobal.com">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="BW Tech Global - Expert Underwater Inspection & Diving Services">
+    <meta property="og:description" content="BW Tech Global is a leading underwater inspection and diving company serving Nigeria, Ghana, Ivory Coast, and West Africa.">
+    <meta property="og:image" content="https://bwtechglobal.com/static/images/logo.png">
+    <meta property="og:url" content="https://bwtechglobal.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BW Tech Global - Expert Underwater Inspection & Diving Services">
+    <meta name="twitter:description" content="BW Tech Global is a leading underwater inspection and diving company serving Nigeria, Ghana, Ivory Coast, and West Africa.">
+    <meta name="twitter:image" content="https://bwtechglobal.com/static/images/logo.png">
+    {% endblock %}
+
+    <!--=====FAB ICON=======-->
+    <link rel="shortcut icon" href="{%static 'assets/img/logo/BW_TECH_LOGO.png'%}" type="image/x-icon">
+
+    <!--===== CSS LINK =======-->
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/aos.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/fontawesome.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/flaticon.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/mobile.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/owlcarousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/swiper-bundle.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/sidebar.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/slick-slider.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/nice-select.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/plugins/lightbox.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/main.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/custom.css'%}">
+    <style>
+        .btn-professional {
+    background: #003366;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: none;
+    letter-spacing: 0;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+    position: relative;
+    z-index: 1;
+    transition: background 0.2s ease;
+}
+
+.btn-professional:hover {
+    background: #002244;
+    color: #ffffff;
+    transform: none;
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+}
+    </style>
+  
+
+</head>
+
+<body class="homepage1-body" style="margin: 0; padding: 0;">
+
+<!--===== PRELOADER STARTS =======-->
+{% comment %} <div class="preloader">
+    <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-icon"><img src="assets/img/preloader/vl-preloader-1.1.png" alt=""></div>
+    </div>
+</div> {% endcomment %}
+
+<!-- ===================== HEADER TOP AREA START =====================-->
+<div class="vl-header-top d-none d-lg-block">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="vl-header-top-content">
+                    <p>BW TECH GLOBAL - Professional Marine Services</p>
+                    <a href="{%url 'contact-us'%}" class="top-contact">Contact Us Today</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="vl-header-top-icon">
+                    <div class="vl-header-top-icbox">
+                        <div class="top-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="top-content">
+                            <a href="mailto:support@bwtechglobal.com">support@bwtechglobal.com</a>
+                        </div>
+                    </div>
+
+                    <div class="vl-header-top-icbox">
+                        <div class="top-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="top-content">
+                            <a href="tel:+2348171409641">+234-817-140-9641</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===================== HEADER TOP AREA END =====================-->
+
+<!--=====HEADER START=======-->
+<header>
+    <div class="header-area homepage1 header header-sticky d-none d-lg-block" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-elements header-elements-1">
+                        <div class="site-logo">
+                            <a href="{%url 'home'%}">
+                                <img src="{%static 'assets/img/logo/BW_TECH_LOGO.png'%}" alt="BW Tech Global">
+                                <div class="logo-text">
+                                    <h1 class="logo-main">BW TECH GLOBAL</h1>
+                                    <p class="logo-sub">Marine & Offshore Solutions</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="{% if request.path == '/' %}active{% endif %}">
+                                    <a href="{%url 'home'%}">Home</a>
+                                </li>
+                                <li class="{% if 'about' in request.path %}active{% endif %}">
+                                    <a href="{%url 'about-us'%}">About</a>
+                                </li>
+                                <li class="{% if 'services' in request.path %}active{% endif %}">
+                                    <a href="{%url 'services'%}">Services</a>
+                                    <!-- <ul class="dropdown-padding services-mega-menu">
+                                        <div class="services-grid">
+                                            {% for service in services %}
+                                            <a href="{% url 'service_detail' service.id %}" class="service-menu-item">
+                                                <div class="service-icon">
+                                                    <i class="fa-solid fa-water"></i>
+                                                </div>
+                                                <div class="service-content">
+                                                    <h4>{{ service.title }}</h4>
+                                                    <p>{{ service.description|truncatewords:8 }}</p>
+                                                </div>
+                                            </a>
+                                            {% endfor %}
+                                        </div>
+                                    </ul> -->
+                                </li>
+                                <li class="{% if 'projects' in request.path %}active{% endif %}">
+                                    <a href="{%url 'projects'%}">Projects</a>
+                                </li>
+                                <li class="{% if 'contact' in request.path %}active{% endif %}">
+                                    <a href="{%url 'contact-us'%}">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-area">
+                            <a href="{%url 'contact-us'%}" class="btn-professional">
+                                Get Quote <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--=====HEADER END =======-->
+
+<!--===== MOBILE HEADER =======-->
+<div class="mobile-header-wrapper d-block d-lg-none">
+   
+    
+
+  
+    <div class="mobile-main-header">
+        <div class="container">
+            <div class="mobile-header-inner">
+                <div class="mobile-logo">
+                    <a href="{%url 'home'%}">
+                        <img src="{%static 'assets/img/logo/BW_TECH_LOGO.png'%}" alt="BW Tech Global">
+                        <div class="mobile-logo-text">
+                            <span class="logo-main">BW TECH GLOBAL</span>
+                            <span class="logo-sub">Marine & Offshore</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="mobile-nav-toggle">
+                    <button class="nav-toggle-btn" id="mobileNavToggle">
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Navigation Menu -->
+<nav class="mobile-navigation" id="mobileNav">
+    <div class="mobile-nav-container">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-logo">
+                <img src="{%static 'assets/img/logo/BW_TECH_LOGO.png'%}" alt="BW Tech Global">
+                <span>BW TECH</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="mobile-nav-menu">
+            <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                <a href="{%url 'home'%}" class="nav-link">
+                    <i class="fa-solid fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item {% if 'about' in request.path %}active{% endif %}">
+                <a href="{%url 'about-us'%}" class="nav-link">
+                    <i class="fa-solid fa-building"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            
+            
+            <li class="nav-item {% if 'services' in request.path %}active{% endif %}">
+                <a href="{%url 'services'%}" class="nav-link">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Services</span>
+                </a>
+            </li>
+            
+            <li class="nav-item {% if 'projects' in request.path %}active{% endif %}">
+                <a href="{%url 'projects'%}" class="nav-link">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            
+            <li class="nav-item {% if 'contact' in request.path %}active{% endif %}">
+                <a href="{%url 'contact-us'%}" class="nav-link">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="mobile-nav-footer">
+            <a href="{%url 'contact-us'%}" class="mobile-cta-button">
+                <i class="fa-solid fa-paper-plane"></i>
+                Get Free Quote
+            </a>
+            
+            <div class="mobile-contact-section">
+                <h4>Contact Information</h4>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span>Call Us</span>
+                            <a href="tel:+2348171409641">+234-817-140-9641</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span>Email Us</span>
+                            <a href="mailto:support@bwtechglobal.com">support@bwtechglobal.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span>Visit Us</span>
+                            <span>15, Creek Road, Apapa, Lagos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Overlay -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+<style>
+    /* ===== PROFESSIONAL HEADER STYLES ===== */
+    
+    /* Header Top */
+    .vl-header-top {
+        background: linear-gradient(135deg, #002244 0%, #003366 100%);
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .vl-header-top-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .vl-header-top-content p {
+        color: #ffffff;
+        font-weight: 600;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .top-contact {
+        color: #FF6B35;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .top-contact:hover {
+        color: #ffffff;
+    }
+
+    .vl-header-top-icon {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+    }
+
+    .vl-header-top-icbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .vl-header-top-icbox .top-icon {
+        width: 32px;
+        height: 32px;
+        background: rgba(255,107,53,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vl-header-top-icbox .top-icon i {
+        color: #FF6B35;
+        font-size: 14px;
+    }
+
+    .vl-header-top-icbox .top-content a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .vl-header-top-icbox .top-content a:hover {
+        color: #FF6B35;
+    }
+
+    /* Main Header */
+    .header-area {
+        background: #ffffff !important;
+        box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .header-sticky {
+        background: #ffffff !important;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+    }
+
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+
+    .site-logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .site-logo img {
+        height: 50px;
+        width: auto;
+    }
+
+    .logo-text {
+        margin-left: 12px;
+    }
+
+    .logo-main {
+        font-size: 22px;
+        font-weight: 800;
+        color: #003366;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .logo-sub {
+        font-size: 11px;
+        color: #FF6B35;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* Main Navigation */
+    .main-menu {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-menu ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 8px;
+    }
+
+    .main-menu ul li {
+        position: relative;
+    }
+
+    .main-menu ul li > a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 12px 20px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .main-menu ul li > a:hover {
+        background: rgba(0,51,102,0.05);
+        color: #003366;
+    }
+
+    .main-menu ul li.active > a {
+        background: linear-gradient(135deg, #003366, #00509E);
+        color: #ffffff;
+    }
+
+    /* Dropdown Menu */
+    .main-menu ul li ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #ffffff;
+        min-width: 280px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        padding: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .main-menu ul li:hover > ul {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .services-mega-menu {
+        min-width: 600px;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(10px) !important;
+    }
+
+    .services-mega-menu:hover {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .service-menu-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #333333;
+    }
+
+    .service-menu-item:hover {
+        background: rgba(0,51,102,0.05);
+        transform: translateY(-2px);
+    }
+
+    .service-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #003366, #00509E);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+
+    .service-icon i {
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    .service-content h4 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #003366;
+    }
+
+    .service-content p {
+        margin: 2px 0 0 0;
+        font-size: 12px;
+        color: #666666;
+    }
+
+    /* Header Button */
+    .header-btn1 {
+        background: linear-gradient(135deg, #FF6B35, #FF8C42);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .header-btn1:hover {
+        background: linear-gradient(135deg, #00509E, #003366);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,80,158,0.4);
+    }
+
+    /* ===== PROFESSIONAL MOBILE HEADER STYLES ===== */
+    
+    /* Mobile Header Wrapper */
+    .mobile-header-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: #ffffff;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Mobile Top Bar */
+    .mobile-top-bar {
+        background: linear-gradient(135deg, #002244 0%, #003366 100%);
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-top-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .mobile-contact-info {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .mobile-contact-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-contact-link:hover {
+        color: #FF6B35;
+    }
+
+    .mobile-contact-link i {
+        font-size: 10px;
+    }
+
+    .mobile-social-links {
+        display: flex;
+        gap: 8px;
+    }
+
+    .mobile-social-links a {
+        width: 24px;
+        height: 24px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-social-links a:hover {
+        background: #FF6B35;
+        transform: translateY(-1px);
+    }
+
+    /* Mobile Main Header */
+    .mobile-main-header {
+        background: #ffffff;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .mobile-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobile-logo a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 10px;
+    }
+
+    .mobile-logo img {
+        height: 35px;
+        width: auto;
+    }
+
+    .mobile-logo-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-logo-text .logo-main {
+        font-size: 16px;
+        font-weight: 800;
+        color: #003366;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .mobile-logo-text .logo-sub {
+        font-size: 10px;
+        color: #FF6B35;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin: 0;
+    }
+
+    /* Mobile Navigation Toggle */
+    .mobile-nav-toggle {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-toggle-btn {
+        width: 44px;
+        height: 44px;
+        background: linear-gradient(135deg, #003366, #00509E);
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 10px;
+    }
+
+    .nav-toggle-btn:hover {
+        background: linear-gradient(135deg, #FF6B35, #FF8C42);
+        transform: scale(1.05);
+    }
+
+    .toggle-bar {
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    .nav-toggle-btn.active .toggle-bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .nav-toggle-btn.active .toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle-btn.active .toggle-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Mobile Navigation */
+    .mobile-navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1002;
+        overflow-y: auto;
+    }
+
+    .mobile-navigation.active {
+        right: 0;
+    }
+
+    .mobile-nav-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-nav-header {
+        background: linear-gradient(135deg, #003366, #00509E);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .mobile-nav-logo img {
+        height: 30px;
+        width: auto;
+    }
+
+    .mobile-nav-close {
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.15);
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+
+    .mobile-nav-close:hover {
+        background: rgba(255,255,255,0.25);
+        transform: rotate(90deg);
+    }
+
+    /* Mobile Navigation Menu */
+    .mobile-nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 18px 25px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: all 0.3s ease;
+        font-size: 16px;
+        width: 100%;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .nav-item.active .nav-link {
+        background: rgba(0,51,102,0.05);
+        color: #003366;
+        border-left: 4px solid #003366;
+    }
+
+    .nav-link:hover {
+        background: rgba(0,51,102,0.08);
+        color: #003366;
+    }
+
+    .nav-link i:first-child {
+        width: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: #003366;
+    }
+
+    /* Dropdown Styles */
+    .has-dropdown .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .dropdown-icon {
+        transition: transform 0.3s ease;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .has-dropdown.active .dropdown-icon {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: rgba(0,51,102,0.03);
+        display: none;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-link {
+        padding: 15px 25px 15px 65px;
+        font-weight: 500;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #333333;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-link:hover {
+        background: rgba(0,51,102,0.05);
+        color: #003366;
+        padding-left: 70px;
+    }
+
+    .dropdown-link i {
+        font-size: 12px;
+        color: #666;
+    }
+
+    /* Mobile Navigation Footer */
+    .mobile-nav-footer {
+        padding: 25px;
+        background: #f8f9fa;
+        border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .mobile-cta-button {
+        background: #003366;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 25px;
+        transition: background 0.2s ease;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+    }
+
+    .mobile-cta-button:hover {
+        background: #002244;
+        color: #ffffff;
+        transform: none;
+        box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+    }
+
+    .mobile-contact-section h4 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 15px;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-detail {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .contact-detail i {
+        width: 20px;
+        text-align: center;
+        color: #003366;
+        font-size: 16px;
+        margin-top: 2px;
+    }
+
+    .contact-detail div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-detail span:first-child {
+        font-size: 12px;
+        color: #666;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+
+    .contact-detail a,
+    .contact-detail span:last-child {
+        font-size: 14px;
+        color: #333333;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .contact-detail a:hover {
+        color: #003366;
+    }
+
+    /* Overlay */
+    .mobile-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1001;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Body States */
+    body.mobile-nav-open {
+        overflow: hidden;
+    }
+
+    body {
+        padding-top: 112px; /* Adjust based on mobile header height */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .mobile-navigation {
+            width: 280px;
+        }
+        
+        .mobile-top-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .mobile-contact-info {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .nav-link {
+            padding: 16px 20px;
+        }
+        
+        .dropdown-link {
+            padding: 12px 20px 12px 60px;
+        }
+        
+        .mobile-nav-footer {
+            padding: 20px;
+        }
+        
+        body {
+            padding-top: 120px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .mobile-navigation {
+            width: 100%;
+        }
+        
+        .mobile-logo-text .logo-main {
+            font-size: 14px;
+        }
+        
+        .mobile-logo-text .logo-sub {
+            font-size: 9px;
+        }
+    }
+
+    /* Desktop Header Styles (Keep your existing desktop styles) */
+    .header-area {
+        background: #ffffff !important;
+        box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .header-sticky {
+        background: #ffffff !important;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Animation */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .header-sticky {
+        animation: fadeInDown 0.5s ease;
+    }
+</style>
+<style>
+    .vl-footer-bg-1 {
+        background: linear-gradient(135deg, #002244 0%, #003366 100%) !important;
+        position: relative;
+        margin-top: 0 !important; /* Remove any top margin causing spacing */
+        padding: 60px 0 0 0 !important; /* Adjusted padding */
+    }
+
+    .vl-footer-bg-1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .vl-footer-bg-1 > .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Footer Widget Styles */
+    .vl-footer-widget-1,
+    .vl-footer-widget-2,
+    .vl-footer-widget-3 {
+        color: #ffffff !important;
+        margin-bottom: 40px;
+    }
+
+    .vl-footer-widget-1 .title,
+    .vl-footer-widget-2 .title,
+    .vl-footer-widget-3 .title {
+        color: #ffffff !important;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    .vl-footer-widget-2 .title::after,
+    .vl-footer-widget-3 .title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #FF6B35;
+        border-radius: 2px;
+    }
+
+    /* Footer Logo */
+    .vl-footer-logo img {
+        filter: brightness(0) invert(1);
+        margin-bottom: 20px;
+        height: 60px !important;
+        width: auto;
+    }
+
+    /* Footer Content */
+    .vl-footer-content p {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    /* Footer Menu */
+    .vl-footer-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .vl-footer-menu ul li {
+        margin-bottom: 12px;
+    }
+
+    .vl-footer-menu ul li a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+
+    .vl-footer-menu ul li a::before {
+        content: '▸';
+        color: #FF6B35;
+        margin-right: 10px;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .vl-footer-menu ul li a:hover {
+        color: #FF6B35 !important;
+        transform: translateX(5px);
+    }
+
+    .vl-footer-menu ul li a:hover::before {
+        transform: translateX(3px);
+    }
+
+    /* Footer Icon Lists */
+    .vl-footer-icon-list {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .vl-footer-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 107, 53, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .vl-footer-icon i {
+        color: #FF6B35;
+        font-size: 16px;
+    }
+
+    .vl-footer-text a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 1.5;
+        transition: all 0.3s ease;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .vl-footer-text a:hover {
+        color: #FF6B35 !important;
+    }
+
+    /* Social Media Icons */
+    .vl-footer-social-1 ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 12px;
+    }
+
+    .vl-footer-social-1 ul li a {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff !important;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .vl-footer-social-1 ul li a:hover {
+        background: #FF6B35;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+
+    /* Copyright Section */
+    .vl-copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        margin-top: 20px !important; /* Reduced margin */
+    }
+
+    .vl-copyright-text {
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .vl-copyright-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 25px;
+        justify-content: flex-end;
+    }
+
+    .vl-copyright-menu ul li a {
+        color: rgba(255, 255, 255, 0.8) !important;
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .vl-copyright-menu ul li a:hover {
+        color: #FF6B35 !important;
+    }
+
+    /* Services List Update */
+    .vl-footer-widget-2 .vl-footer-menu ul li a {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .vl-footer-widget-2 .vl-footer-menu ul li a:hover {
+        color: #FF6B35 !important;
+    }
+
+    /* Remove any extra margins from Bootstrap classes */
+    .mb-30 {
+        margin-bottom: 30px !important;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .vl-footer-bg-1 {
+            padding: 40px 0 0 0 !important; /* Reduced padding for mobile */
+        }
+
+        .vl-footer-widget-2.pl-90,
+        .vl-footer-widget-2.pl-30 {
+            padding-left: 15px !important;
+        }
+
+        .vl-copyright-menu ul {
+            justify-content: flex-start;
+            margin-top: 15px;
+            gap: 15px;
+        }
+
+        .vl-footer-icon-list {
+            gap: 12px;
+        }
+
+        .vl-footer-icon {
+            width: 35px;
+            height: 35px;
+        }
+
+        .vl-footer-widget-1,
+        .vl-footer-widget-2,
+        .vl-footer-widget-3 {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .vl-footer-bg-1 {
+            padding: 30px 0 0 0 !important; /* Further reduced padding for small screens */
+        }
+
+        .vl-footer-social-1 ul {
+            justify-content: flex-start;
+        }
+
+        .vl-copyright-menu ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .vl-footer-logo img {
+            height: 50px !important;
+        }
+
+        .vl-footer-content p {
+            font-size: 14px;
+        }
+    }
+
+    /* Remove all extra margins that might cause spacing */
+    @media (min-width: 1200px) {
+        .vl-footer-bg-1 {
+            margin-top: 0 !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .vl-footer-bg-1 {
+            padding: 25px 0 0 0 !important;
+        }
+        
+        .vl-footer-icon-list {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .vl-footer-icon {
+            align-self: flex-start;
+        }
+    }
+
+    /* Ensure no extra spacing from previous sections */
+    .vl-footer-bg-1 {
+        clear: both;
+    }
+</style>
+
+
+
+{%block content%}
+{%endblock content%}
+
+<!--===== FOOTER AREA STARTS =======-->
+<footer class="vl-footer-bg-1">
+    <div class="container">
+        
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="vl-footer-widget-1">
+                    <div class="vl-footer-logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'assets/img/logo/BW_TECH_LOGO.png' %}" alt="BW Tech Global" height="70">
+                        </a>
+                    </div>
+                    <div class="vl-footer-content">
+                        <p>Now is the time to act—every decision counts in ensuring safety, quality, and excellence in the marine, oil/gas, and underwater industries. We deliver professional solutions with uncompromising standards.</p>
+                    </div>
+                    <div class="vl-footer-social-1">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="vl-footer-widget-2 mb-30">
+                    <h3 class="title">Quick Links</h3>
+                    <div class="vl-footer-menu">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home Page</a></li>
+                            <li><a href="{% url 'about-us' %}">About Us</a></li>
+                            <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
+                            <li><a href="{% url 'projects' %}">Our Projects</a></li>
+                            <li><a href="#services">Our Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="vl-footer-widget-2 mb-30">
+                    <h3 class="title">Our Services</h3>
+                    <div class="vl-footer-menu">
+                        <ul>
+                            {% for service in services|slice:":5" %}
+                            <li><a href="{% url 'service_detail' service.slug %}">{{ service.title }}</a></li>
+                            {% empty %}
+                            <li><a href="#">Underwater Inspection</a></li>
+                            <li><a href="#">Marine Engineering</a></li>
+                            <li><a href="#">Offshore Maintenance</a></li>
+                            <li><a href="#">Diving Services</a></li>
+                            <li><a href="#">Marine Logistics</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="vl-footer-widget-3 mb-30">
+                    <h3 class="title">Contact Info</h3>
+                    <div class="vl-footer-icon-list">
+                        <div class="vl-footer-icon">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                        </div>
+                        <div class="vl-footer-text">
+                            <a href="mailto:support@bwtechglobal.com">support@bwtechglobal.com</a>
+                            <a href="mailto:info@bwtechglobal.com">info@bwtechglobal.com</a>
+                            <a href="mailto:info.bwtgl@gmail.com">info.bwtgl@gmail.com</a>
+                        </div>
+                    </div>
+
+                    
+          
+
+                    <!-- <div class="vl-footer-icon-list">
+                        <div class="vl-footer-icon">
+                            <span><i class="fa-solid fa-phone"></i></span>
+                        </div>
+                        <div class="vl-footer-text">
+                            <a href="tel:+234-8171409641">+234-817-140-9641</a>
+                            <a href="tel:+234-7067018648">+234-706-701-8648</a>
+                            <a href="tel:+234-9164821760">+234-916-482-1760</a>
+                            <a href="tel:+224-626149570">+224-626-149-570</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="vl-copyright copyright-border-1">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="vl-copyright-text">© 2025 BW Tech Global Logistics Services. All Rights Reserved.</p>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="vl-copyright-menu">
+                        <ul>
+                            <li><a href="{%url 'privacy'%}">Privacy Policy</a></li>
+                            <li><a href="{%url 'terms'%}">Terms & Conditions</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="col-md-6 mt-3">
+    <div class="vl-copyright-menu">
+        <div class="row row-cols-3 g-2">
+            <div class="col">
+                <a href="{%url 'privacy'%}" class="d-block text-decoration-none text-white">Privacy Policy</a>
+            </div>
+            <div class="col">
+                <a href="{%url 'terms'%}" class="d-block text-decoration-none text-white">Terms & Conditions</a>
+            </div>
+            <div class="col">
+                <a href="{%url 'django.contrib.sitemaps.views.sitemap'%}" class="d-block text-decoration-none text-white">Site Map</a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--===== FOOTER AREA ENDS =======-->
+
+<!--===== Scroll Top =======-->
+<div class="paginacontainer">
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+    </div>
+</div> 
+
+<!--===== JS SCRIPT LINK =======-->
+<script src="{%static 'assets/js/plugins/jquery-3.7.1.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/bootstrap.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/fontawesome.js'%}"></script>
+<script src="{%static 'assets/js/plugins/aos.js'%}"></script>
+<script src="{%static 'assets/js/plugins/counter.js'%}"></script>
+<script src="{%static 'assets/js/plugins/sidebar.js'%}"></script>
+<script src="{%static 'assets/js/plugins/magnific-popup.js'%}"></script>
+<script src="{%static 'assets/js/plugins/mobilemenu.js'%}"></script>
+<script src="{%static 'assets/js/plugins/owlcarousel.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/swiper-bundle.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/nice-select.js'%}"></script>
+<script src="{%static 'assets/js/plugins/jquery.counterup.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/waypoints.js'%}"></script>
+<script src="{%static 'assets/js/plugins/slick-slider.js'%}"></script>
+<script src="{%static 'assets/js/plugins/circle-progress.js'%}"></script>
+<script src="{%static 'assets/js/plugins/gsap.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/ScrollTrigger.min.js'%}"></script>
+<script src="{%static 'assets/js/plugins/Splitetext.js'%}"></script>
+<script src="{%static 'assets/js/plugins/lightbox.js'%}"></script>
+<script src="{%static 'assets/js/main.js'%}"></script>
+
+<script>
+    // Professional Mobile Navigation Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const body = document.body;
+
+        // Toggle mobile navigation
+        function toggleMobileNav() {
+            const isActive = mobileNav.classList.contains('active');
+            
+            if (isActive) {
+                closeMobileNav();
+            } else {
+                openMobileNav();
+            }
+        }
+
+        // Open mobile navigation
+        function openMobileNav() {
+            mobileNav.classList.add('active');
+            mobileNavOverlay.classList.add('active');
+            mobileNavToggle.classList.add('active');
+            body.classList.add('mobile-nav-open');
+        }
+
+        // Close mobile navigation
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            mobileNavToggle.classList.remove('active');
+            body.classList.remove('mobile-nav-open');
+            
+            // Close all dropdowns
+            document.querySelectorAll('.has-dropdown').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        // Event listeners
+        mobileNavToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMobileNav();
+        });
+
+        mobileNavClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeMobileNav();
+        });
+
+        mobileNavOverlay.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeMobileNav();
+        });
+
+        // ESC key to close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMobileNav();
+            }
+        });
+
+        // Dropdown functionality
+        document.querySelectorAll('.has-dropdown .dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const parent = this.closest('.has-dropdown');
+                parent.classList.toggle('active');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.has-dropdown').forEach(item => {
+                    if (item !== parent) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Close mobile nav when clicking on regular links
+        document.querySelectorAll('.nav-link[href]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 992) {
+                    closeMobileNav();
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 992) {
+                closeMobileNav();
+            }
+        });
+
+        // Prevent default behavior for dropdown toggles
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script>
+</body>
+</html>

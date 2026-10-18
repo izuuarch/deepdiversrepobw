@@ -1,0 +1,3 @@
+cd /Users/macbookpro/Documents/deepdivers
+source .venv/bin/activate
+DJANGO_SETTINGS_MODULE=deepdivers.local_settings python manage.py runserver

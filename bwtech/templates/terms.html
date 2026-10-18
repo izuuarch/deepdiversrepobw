@@ -1,0 +1,623 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block title%}Terms & Conditions - Website Use Agreement | BW Tech Global{% endblock %}
+  {% block metadesc %}
+    <meta name="description" content="Review the Terms and Conditions for the BW Tech website. This document outlines the legal agreement, services disclaimer, and intellectual property rights.">
+    {% endblock %}
+
+{%block content%}
+<style>
+    /* Terms and Conditions Professional Styling */
+    
+    /* Breadcrumb Section */
+    .vl-breadcrumb {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: #ffffff;
+    }
+    
+    .vl-breadcrumb::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0,51,102,0.9) 0%, rgba(0,34,68,0.8) 100%);
+    }
+    
+    .vl-breadcrumb > .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .vl-breadcrumb-title .heading {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .vl-breadcrumb-list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+        justify-content: center;
+    }
+    
+    .vl-breadcrumb-list a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .vl-breadcrumb-list a:hover,
+    .vl-breadcrumb-list a.active {
+        color: #FF6B35;
+    }
+    
+    .vl-breadcrumb-list .dvir {
+        color: rgba(255,255,255,0.6);
+    }
+    
+    /* Terms Content */
+    .terms-section {
+        padding: 80px 0;
+        background: #ffffff;
+    }
+    
+    .terms-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .terms-header {
+        text-align: center;
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .terms-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .terms-header .subtitle {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+    
+    .terms-article {
+        margin-bottom: 40px;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border-left: 4px solid #003366;
+    }
+    
+    .terms-article h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #003366;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .terms-article h2 i {
+        color: #FF6B35;
+        font-size: 1.5rem;
+    }
+    
+    .terms-article h3 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: #00509E;
+        margin: 1.5rem 0 1rem 0;
+        padding-left: 10px;
+        border-left: 3px solid #FF6B35;
+    }
+    
+    .terms-article p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+    
+    .terms-article ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 1rem 0;
+    }
+    
+    .terms-article ul li {
+        padding: 8px 0;
+        padding-left: 30px;
+        position: relative;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+    
+    .terms-article ul li::before {
+        content: '•';
+        color: #FF6B35;
+        font-weight: bold;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 15px;
+        top: 8px;
+    }
+    
+    .warning-box {
+        background: rgba(220, 53, 69, 0.05);
+        border: 1px solid rgba(220, 53, 69, 0.2);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 1.5rem 0;
+    }
+    
+    .warning-box h4 {
+        color: #dc3545;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .info-box {
+        background: rgba(0, 123, 255, 0.05);
+        border: 1px solid rgba(0, 123, 255, 0.2);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 1.5rem 0;
+    }
+    
+    .info-box h4 {
+        color: #00509E;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #003366, #00509E);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+    
+    .contact-link:hover {
+        background: linear-gradient(135deg, #FF6B35, #FF8C42);
+        transform: translateY(-2px);
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+    }
+    
+    .legal-note {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid #e9ecef;
+        color: #666;
+        font-style: italic;
+    }
+    
+    .acceptance-box {
+        background: rgba(40, 167, 69, 0.05);
+        border: 2px solid #28a745;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    
+    .acceptance-box p {
+        font-weight: 600;
+        color: #155724;
+        margin-bottom: 0;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 1200px) {
+        .terms-header h1 {
+            font-size: 2.25rem;
+        }
+        
+        .terms-article h2 {
+            font-size: 1.6rem;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .vl-breadcrumb {
+            padding: 80px 0;
+        }
+        
+        .vl-breadcrumb-title .heading {
+            font-size: 2.25rem;
+        }
+        
+        .terms-section {
+            padding: 60px 0;
+        }
+        
+        .terms-header h1 {
+            font-size: 2rem;
+        }
+        
+        .terms-article {
+            padding: 25px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .vl-breadcrumb {
+            padding: 60px 0;
+        }
+        
+        .vl-breadcrumb-title .heading {
+            font-size: 2rem;
+        }
+        
+        .terms-section {
+            padding: 50px 0;
+        }
+        
+        .terms-header {
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+        }
+        
+        .terms-header h1 {
+            font-size: 1.75rem;
+        }
+        
+        .terms-header .subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .terms-article {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .terms-article h2 {
+            font-size: 1.4rem;
+        }
+        
+        .terms-article h3 {
+            font-size: 1.2rem;
+        }
+        
+        .terms-article p, .terms-article ul li {
+            font-size: 0.95rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .vl-breadcrumb {
+            padding: 50px 0;
+        }
+        
+        .vl-breadcrumb-title .heading {
+            font-size: 1.75rem;
+        }
+        
+        .vl-breadcrumb-list {
+            font-size: 0.9rem;
+        }
+        
+        .terms-section {
+            padding: 40px 0;
+        }
+        
+        .terms-header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .terms-header .subtitle {
+            font-size: 1rem;
+        }
+        
+        .terms-article {
+            padding: 15px;
+        }
+        
+        .terms-article h2 {
+            font-size: 1.25rem;
+        }
+        
+        .terms-article h3 {
+            font-size: 1.1rem;
+        }
+        
+        .terms-article ul li {
+            padding-left: 25px;
+        }
+        
+        .terms-article ul li::before {
+            left: 10px;
+        }
+        
+        .contact-link {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .vl-breadcrumb-title .heading {
+            font-size: 1.5rem;
+        }
+        
+        .terms-header h1 {
+            font-size: 1.35rem;
+        }
+        
+        .terms-article h2 {
+            font-size: 1.15rem;
+        }
+    }
+    
+    /* Animation Enhancements */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .terms-header,
+    .terms-article {
+        animation: fadeInUp 0.8s ease;
+    }
+    
+    .terms-article:nth-child(odd) {
+        animation-delay: 0.1s;
+    }
+    
+    .terms-article:nth-child(even) {
+        animation-delay: 0.2s;
+    }
+    
+    /* Print Styles */
+    @media print {
+        .vl-breadcrumb {
+            background: #003366 !important;
+            color: #ffffff !important;
+            padding: 40px 0 !important;
+        }
+        
+        .terms-section {
+            padding: 20px 0 !important;
+        }
+        
+        .contact-link {
+            display: none;
+        }
+    }
+</style>
+
+<!--===== BREADCRUMB AREA STARTS =======-->
+<section class="vl-breadcrumb" style="background-image: url({%static 'assets/img/breadcrumb/pexels-pixabay.jpg'%});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="vl-breadcrumb-title">
+          <h2 class="heading">Terms & Conditions</h2>
+            <div class="vl-breadcrumb-list">
+              <span><a href="{%url 'home'%}">Home</a></span>
+              <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
+              <span><a class="active" href="#">Terms & Conditions</a></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== BREADCRUMB AREA ENDS =======-->
+
+<!--===== TERMS AND CONDITIONS CONTENT =======-->
+<section class="terms-section">
+    <div class="container">
+        <div class="terms-content">
+            <!-- Header Section -->
+            <div class="terms-header">
+                <h1>Our Terms and Conditions - BW Tech</h1>
+                <p class="subtitle">
+                    These Terms govern your use of the BW Tech website and outline the legal agreement between you and BW Tech Global Logistics Services.
+                </p>
+            </div>
+
+            <!-- Agreement Acceptance Box -->
+            <div class="acceptance-box">
+                <p>
+                    <i class="fa-solid fa-check-circle me-2"></i>
+                    By accessing and using this website, you agree to be bound by these Terms and Conditions
+                </p>
+            </div>
+
+            <!-- Agreement to Terms Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-handshake"></i>
+                    Agreement to Terms
+                </h2>
+                <p>
+                    By accessing and using this website, located at <strong>bwtechglobal.com</strong>, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+                </p>
+                <div class="warning-box">
+                    <h4>
+                        <i class="fa-solid fa-exclamation-triangle"></i>
+                        Important Notice
+                    </h4>
+                    <p>Continued use of this website constitutes your acceptance of these Terms and Conditions. If you do not agree with any part of these terms, please discontinue use of our website immediately.</p>
+                </div>
+            </div>
+
+            <!-- Services Disclaimer Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-file-contract"></i>
+                    Services Disclaimer
+                </h2>
+
+                <h3>Information Purpose</h3>
+                <p>
+                    The content on this website (including Service Pages, Project Case Studies, and News) is provided for general information purposes only and does not constitute a professional offer, commitment, or guarantee of services.
+                </p>
+
+                <h3>Contractual Agreement</h3>
+                <p>
+                    Services (including Diving, IWS, Hull Cleaning, and Logistics) are only binding upon the execution of a formal, written contract signed by authorized representatives of both BW Tech and the client. All commercial relationships are governed by the terms of that specific contract.
+                </p>
+
+                <h3>Operational Risk</h3>
+                <p>
+                    The marine and offshore environment involves inherent risks. BW Tech conducts all operations in strict compliance with international and local HSE (Health, Safety, and Environment) standards, but liability and risk transfer are exclusively defined in the governing contract.
+                </p>
+
+                <div class="info-box">
+                    <h4>
+                        <i class="fa-solid fa-info-circle"></i>
+                        Professional Services Note
+                    </h4>
+                    <p>All marine and offshore services are subject to separate contractual agreements. Website content is for informational purposes only and does not constitute a binding service agreement.</p>
+                </div>
+            </div>
+
+            <!-- Intellectual Property Rights Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-copyright"></i>
+                    Intellectual Property Rights
+                </h2>
+
+                <h3>Ownership</h3>
+                <p>
+                    All content, graphics, logos, images (including project images), and proprietary text found on the website are the exclusive property of BW Tech or its licensors and are protected by copyright and trademark laws.
+                </p>
+
+                <h3>Restrictions</h3>
+                <p>
+                    You are granted a non-exclusive, non-transferable, revocable license to access and use the website strictly in accordance with these Terms. You may not reproduce, distribute, or use any content (especially Project Case Studies) for commercial purposes without our express written permission.
+                </p>
+
+                <div class="warning-box">
+                    <h4>
+                        <i class="fa-solid fa-ban"></i>
+                        Prohibited Uses
+                    </h4>
+                    <p>The following activities are strictly prohibited without prior written consent from BW Tech:</p>
+                    <ul>
+                        <li>Commercial use of project case studies or service descriptions</li>
+                        <li>Reproduction of technical specifications or service methodologies</li>
+                        <li>Distribution of proprietary marine operation procedures</li>
+                        <li>Use of company logos or branding materials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Limitation of Liability Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    Limitation of Liability
+                </h2>
+                <p>
+                    BW Tech, its directors, employees, or agents will not be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on BW Tech's website, even if BW Tech or a BW Tech authorized representative has been notified orally or in writing of the possibility of such damage.
+                </p>
+                <div class="info-box">
+                    <h4>
+                        <i class="fa-solid fa-shield-alt"></i>
+                        Risk Acknowledgement
+                    </h4>
+                    <p>Users acknowledge that marine and offshore operations involve inherent risks, and website content is provided for informational purposes only. Actual service delivery is governed by separate contractual agreements.</p>
+                </div>
+            </div>
+
+            <!-- Governing Law Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-gavel"></i>
+                    Governing Law
+                </h2>
+                <p>
+                    These Terms and Conditions are governed by and construed in accordance with the laws of the Federal Republic of Nigeria (where BW Tech is registered), and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+                </p>
+            </div>
+
+            <!-- Modifications Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Modifications
+                </h2>
+                <p>
+                    BW Tech reserves the right to revise these Terms and Conditions at any time without notice. By using this website, you are agreeing to be bound by the then-current version of these Terms and Conditions.
+                </p>
+                <div class="info-box">
+                    <h4>
+                        <i class="fa-solid fa-bell"></i>
+                        Update Notification
+                    </h4>
+                    <p>We recommend reviewing these Terms and Conditions periodically for any changes. Continued use of the website after changes constitutes acceptance of the modified terms.</p>
+                </div>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="terms-article">
+                <h2>
+                    <i class="fa-solid fa-headset"></i>
+                    Contact Us
+                </h2>
+                <p>
+                    If you have questions regarding these Terms and Conditions or need clarification on any provision, please don't hesitate to contact our legal team:
+                </p>
+                <a href="{% url 'contact-us' %}" class="contact-link">
+                    Contact BW Tech <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Legal Note -->
+            <div class="legal-note">
+                <p>This document was last updated: January 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== TERMS AND CONDITIONS CONTENT ENDS =======-->
+{%endblock content %}
+

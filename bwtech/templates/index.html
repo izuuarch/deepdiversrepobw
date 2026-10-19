@@ -182,14 +182,14 @@
     }
     
     .vl-hero-section-title {
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
 
     .vl-hero-section-title p {
         font-size: 1.125rem;
         line-height: 1.55;
-        margin: 0 auto 2rem;
+        margin: 0 0 2rem;
         color: rgba(255, 255, 255, 0.95);
         font-weight: 400;
         max-width: 640px;
@@ -200,7 +200,7 @@
         display: flex;
         gap: 12px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         margin-bottom: 1.5rem;
     }
@@ -263,7 +263,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        padding-bottom: 4rem;
+        padding-bottom: 0;
     }
     
     .vl-hero-bg {
@@ -295,23 +295,23 @@
         z-index: 2;
         height: 100%;
         display: flex;
-        align-items: center;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
+        align-items: flex-end;
+        padding-top: 0;
+        padding-bottom: 140px;
     }
     
     .vl-hero-slider .row {
         width: 100%;
         margin: 0;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .vl-hero-slider .col-lg-8 {
         display: flex;
         align-items: center;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
     }
     
     /* Social icons positioning */
@@ -364,11 +364,11 @@
         .vl-hero-slider {
             height: 90vh;
             min-height: 600px;
-            padding-bottom: 3rem;
+            padding-bottom: 0;
         }
         
         .vl-hero-slider .container {
-            padding-bottom: 3rem;
+            padding-bottom: 100px;
         }
     }
     
@@ -448,7 +448,7 @@
         
         .vl-hero-btn {
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.875rem;
             width: 100%;
             margin-bottom: 2rem;
@@ -464,13 +464,13 @@
         }
         
         .vl-hero-slider {
-            height: auto;
-            min-height: 80vh;
-            padding-bottom: 2.5rem;
+            height: 80vh;
+            min-height: 560px;
+            padding-bottom: 0;
         }
         
         .vl-hero-slider .container {
-            padding-bottom: 2.5rem;
+            padding-bottom: 48px;
         }
     }
     
@@ -514,14 +514,14 @@
         }
         
         .vl-hero-slider {
-            height: auto;
-            min-height: 75vh;
-            padding-bottom: 2rem;
+            height: 75vh;
+            min-height: 520px;
+            padding-bottom: 0;
         }
         
         .vl-hero-slider .container {
-            padding-top: 1rem;
-            padding-bottom: 2rem;
+            padding-top: 0;
+            padding-bottom: 40px;
         }
     }
     
@@ -769,8 +769,8 @@
 
 .home-services-heading {
     max-width: 640px;
-    margin: 0 auto 28px;
-    text-align: center;
+    margin: 0 0 28px;
+    text-align: left;
 }
 
 .home-services-kicker {
@@ -810,8 +810,8 @@
     flex-direction: column;
     flex: 1 1 300px;
     max-width: 380px;
-    background: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -836,7 +836,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #003366;
+    color: #ffffff;
     font-size: 22px;
 }
 
@@ -854,13 +854,10 @@
     line-height: 24px;
 }
 
-.home-service h3 a {
-    color: #0f172a;
-    text-decoration: none;
-}
-
+.home-service h3 a,
 .home-service h3 a:hover {
-    color: #003366;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .home-service-body p {
@@ -869,10 +866,11 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    color: #64748b;
+    color: #ffffff;
 }
 
-.home-service-link {
+.home-service-link,
+.home-service-link:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -880,12 +878,8 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    color: #003366;
+    color: #ffffff;
     text-decoration: none;
-}
-
-.home-service-link:hover {
-    color: #002244;
 }
 
 .home-services-action {
@@ -1671,8 +1665,8 @@
 
     .home-projects-heading {
         max-width: 640px;
-        margin: 0 auto 28px;
-        text-align: center;
+        margin: 0 0 28px;
+        text-align: left;
     }
 
     .home-projects-kicker {
@@ -1712,8 +1706,8 @@
         flex-direction: column;
         flex: 1 1 300px;
         max-width: 380px;
-        background: #ffffff;
-        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: #003366;
+        border: 1px solid #003366;
         border-radius: 12px;
         overflow: hidden;
     }
@@ -1738,7 +1732,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #003366;
+        color: #ffffff;
         font-size: 22px;
     }
 
@@ -1757,12 +1751,12 @@
         font-size: 12px;
         font-weight: 500;
         line-height: 16px;
-        color: #64748b;
+        color: #ffffff;
     }
 
     .home-project-meta i {
         margin-right: 4px;
-        color: #003366;
+        color: #ffffff;
     }
 
     .home-project h3 {
@@ -1772,13 +1766,10 @@
         line-height: 24px;
     }
 
-    .home-project h3 a {
-        color: #0f172a;
-        text-decoration: none;
-    }
-
+    .home-project h3 a,
     .home-project h3 a:hover {
-        color: #003366;
+        color: #ffffff;
+        text-decoration: none;
     }
 
     .home-project-body p {
@@ -1787,10 +1778,11 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
-        color: #64748b;
+        color: #ffffff;
     }
 
-    .home-project-link {
+    .home-project-link,
+    .home-project-link:hover {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -1798,12 +1790,8 @@
         font-size: 14px;
         font-weight: 600;
         line-height: 20px;
-        color: #003366;
+        color: #ffffff;
         text-decoration: none;
-    }
-
-    .home-project-link:hover {
-        color: #002244;
     }
 
     .home-projects-action {
@@ -2259,7 +2247,7 @@
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
-    color: #FF6B35;
+    color: #ffffff;
     display: block;
 }
 
@@ -2267,7 +2255,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    color: #FF6B35;
+    color: #ffffff;
     margin-top: 2px;
 }
 
@@ -2321,21 +2309,21 @@
 }
 
 .vl-about-section .feature-box i {
-    color: #FF6B35 !important;
+    color: #ffffff !important;
 }
 
 .vl-about-section .feature-box strong {
     display: block;
     font-size: 14px;
     font-weight: 700;
-    color: #FF6B35;
+    color: #ffffff;
     margin-top: 8px;
 }
 
 .vl-about-section .feature-box p {
     font-size: 12px;
     line-height: 16px;
-    color: #FF6B35;
+    color: #ffffff;
     margin-top: 4px;
 }
 
@@ -2425,8 +2413,8 @@
 
 .testimonials-heading {
     max-width: 640px;
-    margin: 0 auto 28px;
-    text-align: center;
+    margin: 0 0 28px;
+    text-align: left;
 }
 
 .testimonials-kicker {
@@ -2601,7 +2589,7 @@
 <!--===== Certifications AREA STARTS =======-->
 <section class="vl-certifications-section sp1">
   <div class="container">
-    <div class="vl-certifications-title mb-60 text-center">
+    <div class="vl-certifications-title mb-60">
       <div class="vl-section-title-1">
         <h2 class="cert-kicker">Certifications</h2>
         <h3 class="title">We are Certified & Approved</h3>
@@ -2746,7 +2734,8 @@
 
 .vl-certifications-title {
     max-width: 640px;
-    margin: 0 auto 28px;
+    margin: 0 0 28px;
+    text-align: left;
 }
 
 .cert-kicker {
@@ -2773,7 +2762,7 @@
     color: #64748b;
     line-height: 24px;
     max-width: 640px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .vl-certification-item {

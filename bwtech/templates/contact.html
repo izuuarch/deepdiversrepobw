@@ -166,10 +166,10 @@
     }
     
     .location-icon {
-        width: 50px;
-        height: 50px;
+        width: 36px;
+        height: 36px;
         background: linear-gradient(135deg, #FF6B35, #FF8C42);
-        border-radius: 50%;
+        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -178,7 +178,7 @@
     
     .location-icon i {
         color: #ffffff;
-        font-size: 1.2rem;
+        font-size: 14px;
     }
     
     .location-title {
@@ -265,8 +265,26 @@
     }
     
     .icon-box-flex .icon {
-        width: 70px;
+        width: 36px;
         flex-shrink: 0;
+    }
+
+    .vl-icon-box-inner .iconbox .icon-box-flex .icon span {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        margin-right: 12px;
+        border-radius: 10px;
+    }
+
+    .vl-icon-box-inner .iconbox .icon-box-flex .icon span img {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+    }
+
+    .vl-icon-box-inner .icon-content {
+        margin-top: 0 !important;
     }
     
     .icon-content .title {
@@ -426,7 +444,7 @@
         }
         
         .icon-box-flex .icon {
-            width: 60px;
+            width: 36px;
         }
         
         .icon-content .title {
@@ -861,7 +879,7 @@
             <div class="icon">
               <span><img src="{%static 'assets/img/icons/vl-phone-icon1.1.svg'%}" alt="Phone Icon"></span>
             </div>
-            <div class="icon-content mt-5">
+            <div class="icon-content">
               <h3 class="title">Call Us Today</h3>
             </div>
           </div>
@@ -880,7 +898,7 @@
             <div class="icon">
               <span><img src="{%static 'assets/img/icons/vl-phone-icon1.2.svg'%}" alt="Email Icon"></span>
             </div>
-            <div class="icon-content mt-5">
+            <div class="icon-content">
               <h3 class="title">Mail Information</h3>
             </div>
           </div>
@@ -898,7 +916,7 @@
             <div class="icon">
               <span><img src="{%static 'assets/img/icons/vl-phone-icon1.3.svg'%}" alt="Location Icon"></span>
             </div>
-            <div class="icon-content mt-5">
+            <div class="icon-content">
               <h3 class="title">Our Location</h3>
             </div>
           </div>

@@ -10,12 +10,13 @@
   .services-hero-section {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    text-align: center;
+    text-align: left;
   }
 
   .services-hero-content {
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 640px;
+    margin: 0;
+    text-align: left;
   }
 
   .services-hero-content .subtitle {
@@ -42,9 +43,9 @@
     line-height: 1.55;
     color: #666;
     margin-bottom: 50px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 640px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .hero-stats {
@@ -305,8 +306,8 @@
   .section-header .section-description {
     font-size: 1.1rem;
     color: #666;
-    max-width: 650px;
-    margin: 0 auto;
+    max-width: 640px;
+    margin: 0;
     line-height: 1.6;
     word-wrap: break-word;
   }
@@ -357,7 +358,7 @@
   .cta-buttons {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -453,7 +454,7 @@
     
     .cta-buttons {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 15px;
     }
 
@@ -543,9 +544,23 @@
     color: #0f172a;
   }
 
+  .services-hero-content {
+    max-width: none;
+  }
+
+  .services-hero-content .subtitle,
+  .services-hero-content .title {
+    max-width: 640px;
+  }
+
+  .services-hero-content,
+  .section-header {
+    text-align: left;
+  }
+
   .services-hero-content .description,
   .section-header .section-description {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -565,8 +580,8 @@
   }
 
   .hero-stats .stat-item {
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.8);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     padding: 14px;
     text-align: left;
@@ -577,7 +592,7 @@
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
-    color: #003366;
+    color: #ffffff;
   }
 
   .hero-stats .stat-item span {
@@ -588,13 +603,13 @@
     line-height: 16px;
     letter-spacing: 0;
     text-transform: none;
-    color: #64748b;
+    color: #ffffff;
   }
 
   .service-card-modern,
   .feature-card {
-    background: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     box-shadow: none;
   }
@@ -610,13 +625,13 @@
     width: 36px;
     height: 36px;
     border-radius: 10px;
-    background: #eef3f8;
+    background: rgba(255, 255, 255, 0.16);
     box-shadow: none;
   }
 
   .service-icon-wrapper i,
   .feature-icon i {
-    color: #003366;
+    color: #ffffff;
     font-size: 14px;
   }
 
@@ -629,12 +644,17 @@
   }
 
   .service-title,
+  .service-title a,
   .feature-title {
     margin: 0 0 6px;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    color: #0f172a;
+    color: #ffffff;
+  }
+
+  .service-title a:hover {
+    color: #ffffff;
   }
 
   .service-description,
@@ -643,26 +663,23 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    color: #64748b;
+    color: #ffffff;
   }
 
   .feature-tag {
-    background: #eef3f8;
-    color: #003366;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
     border-radius: 8px;
     padding: 4px 8px;
     font-size: 12px;
     font-weight: 600;
   }
 
-  .service-link {
+  .service-link,
+  .service-link:hover {
     font-size: 14px;
     font-weight: 600;
-    color: #003366;
-  }
-
-  .service-link:hover {
-    color: #002244;
+    color: #ffffff;
     gap: 10px;
   }
 
@@ -678,6 +695,10 @@
   .vl-cta-bg {
     border-radius: 12px;
     padding: 48px 24px;
+  }
+
+  .vl-cta-content {
+    text-align: left;
   }
 
   .vl-cta-content .title {
@@ -770,9 +791,9 @@
 <!--===== SERVICES HERO SECTION =======-->
 <section class="services-hero-section sp2">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-md-12">
-        <div class="services-hero-content text-center">
+    <div class="row">
+      <div class="col-12">
+        <div class="services-hero-content">
           <h2 class="subtitle">Professional Solutions</h2>
           <h3 class="title">Comprehensive Marine & Offshore Services</h3>
           <p class="description">
@@ -803,7 +824,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section-header text-center mb-60">
+        <div class="section-header mb-60">
           <h2 class="subtitle">Our Expertise</h2>
           <h3 class="section-title">Professional Marine Services</h3>
           <p class="section-description">
@@ -866,7 +887,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section-header text-center mb-60">
+        <div class="section-header mb-60">
           <h2 class="subtitle">Why Choose Us</h2>
           <h3 class="section-title">Excellence in Marine Services</h3>
         </div>
@@ -909,8 +930,8 @@
   <div class="container">
     <div class="vl-cta-bg" style="background-image: url({% static 'assets/img/cta/service-cta-bg.jpg' %});">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="vl-cta-content text-center">
+        <div class="col-lg-8">
+          <div class="vl-cta-content">
             <h2 class="title">Ready to Start Your Project?</h2>
             <p>Contact our expert team today to discuss your marine and offshore service requirements. We're here to provide innovative solutions for your most complex challenges.</p>
             <div class="cta-buttons">

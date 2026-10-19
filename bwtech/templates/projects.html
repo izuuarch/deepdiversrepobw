@@ -11,12 +11,13 @@
   .projects-hero-section {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    text-align: center;
+    text-align: left;
   }
 
   .projects-hero-content {
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 640px;
+    margin: 0;
+    text-align: left;
   }
 
   .projects-hero-content .subtitle {
@@ -43,9 +44,9 @@
     line-height: 1.55;
     color: #666;
     margin-bottom: 50px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 640px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .project-stats {
@@ -101,8 +102,8 @@
   .section-header .section-description {
     font-size: 1.1rem;
     color: #666;
-    max-width: 650px;
-    margin: 0 auto;
+    max-width: 640px;
+    margin: 0;
     line-height: 1.6;
   }
 
@@ -407,7 +408,7 @@
   .cta-buttons {
     display: flex;
     gap: 15px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -477,7 +478,7 @@
 
     .cta-buttons {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
     }
 
@@ -598,9 +599,23 @@
     color: #0f172a;
   }
 
+  .projects-hero-content {
+    max-width: none;
+  }
+
+  .projects-hero-content .subtitle,
+  .projects-hero-content .title {
+    max-width: 640px;
+  }
+
+  .projects-hero-content,
+  .section-header {
+    text-align: left;
+  }
+
   .projects-hero-content .description,
   .section-header .section-description {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -621,8 +636,8 @@
 
   .project-stats .stat-item {
     min-width: 0;
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.8);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     padding: 14px;
     text-align: left;
@@ -633,7 +648,7 @@
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
-    color: #003366;
+    color: #ffffff;
   }
 
   .project-stats .stat-item span {
@@ -644,14 +659,14 @@
     line-height: 16px;
     letter-spacing: 0;
     text-transform: none;
-    color: #64748b;
+    color: #ffffff;
   }
 
   .project-card {
     max-width: none;
     margin: 0;
-    background: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     box-shadow: none;
   }
@@ -665,12 +680,14 @@
     padding: 16px;
   }
 
-  .project-title {
+  .project-title,
+  .project-title a,
+  .project-title a:hover {
     margin: 0 0 6px;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    color: #0f172a;
+    color: #ffffff;
     text-align: left;
   }
 
@@ -679,15 +696,15 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    color: #64748b;
+    color: #ffffff;
     text-align: left;
   }
 
   .project-read-more,
   .project-read-more.btn-professional {
     width: 100%;
-    background: #003366;
-    color: #ffffff;
+    background: #ffffff;
+    color: #003366;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
@@ -712,6 +729,10 @@
   .vl-cta-bg {
     border-radius: 12px;
     padding: 48px 24px;
+  }
+
+  .vl-cta-content {
+    text-align: left;
   }
 
   .vl-cta-content .title {
@@ -811,9 +832,9 @@
 <!-- Projects Hero Section -->
 <section class="projects-hero-section sp2">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-md-12">
-        <div class="projects-hero-content text-center">
+    <div class="row">
+      <div class="col-12">
+        <div class="projects-hero-content">
           <h2 class="subtitle">Our Portfolio</h2>
           <h3 class="title">Successfully Delivered Marine & Offshore Projects</h3>
           <p class="description">
@@ -845,7 +866,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section-header text-center mb-60">
+        <div class="section-header mb-60">
           <h2 class="subtitle">Our Work</h2>
           <h3 class="section-title">Featured Projects</h3>
           <p class="section-description">
@@ -887,7 +908,7 @@
             <h3 class="project-title">
               <a href="{% url 'project_detail' project.slug %}">{{ project.name }}</a>
             </h3>
-            <p class="project-description text-center">{{ project.short_description }}</p>
+            <p class="project-description">{{ project.short_description }}</p>
          
             <a href="{% url 'project_detail' project.slug %}" class="btn-professional project-read-more d-flex justify-content-center">
               View Project Details <i class="fa-solid fa-arrow-right"></i>
@@ -954,8 +975,8 @@
   <div class="container">
     <div class="vl-cta-bg" style="background-image: url({% static 'assets/img/cta/pexels-pin.jpg' %});">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="vl-cta-content text-center">
+        <div class="col-lg-8">
+          <div class="vl-cta-content">
             <h2 class="title">Ready to Start Your Project?</h2>
             <p>Partner with BW Tech Global for your next marine or offshore project. Our experienced team is ready to deliver exceptional results.</p>
             <div class="cta-buttons">

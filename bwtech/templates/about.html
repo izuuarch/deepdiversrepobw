@@ -741,9 +741,16 @@
     color: #0f172a !important;
   }
 
+  .vl-about-vission-bg .vl-section-title-1 .title,
+  .vl-about-mission-bg .mission-content .title {
+    line-height: 1.35 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .vl-section-title-1 p,
   .vl-about-mission-bg .mission-content .para,
-  .vl-vission-content p,
+  .vl-vission-content > p,
   .section-intro,
   .vl-about5 .vl-about-content2 .content .para,
   .vl-counter5.counter-iner .vl-counter-content .vl-section-title-1 .para {
@@ -817,8 +824,8 @@
   }
 
   .timeline-content {
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     padding: 16px;
     box-shadow: none;
@@ -827,6 +834,7 @@
   .timeline-content:hover {
     transform: none;
     box-shadow: none;
+    background: #003366;
   }
 
   .timeline-title {
@@ -834,14 +842,19 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    color: #0f172a;
+    color: #FF6B35;
+  }
+
+  .timeline-content .timeline-title,
+  .timeline-content .timeline-description {
+    color: #FF6B35 !important;
   }
 
   .timeline-description {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    color: #64748b;
+    color: #FF6B35;
   }
 
   .vl-counter5 {
@@ -867,8 +880,8 @@
     text-align: left;
     padding: 14px;
     margin-bottom: 12px;
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.8);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     backdrop-filter: none;
     box-shadow: none;
@@ -876,7 +889,7 @@
 
   .single-counter-box:hover {
     transform: none;
-    background: #f8fafc;
+    background: #003366;
   }
 
   .single-counter-box .title,
@@ -885,7 +898,7 @@
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
-    color: #003366 !important;
+    color: #FF6B35 !important;
     white-space: nowrap;
   }
 
@@ -905,7 +918,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    color: #64748b;
+    color: #FF6B35;
   }
 
   .vl-cta-bg {
@@ -996,9 +1009,11 @@
 
     .vl-section-title-1 .title,
     .mission-content .title,
-    .vl-vission-content .title {
+    .vl-vission-content .title,
+    .vl-about-vission-bg .vl-section-title-1 .title,
+    .vl-about-mission-bg .mission-content .title {
       font-size: 24px;
-      line-height: 1.33;
+      line-height: 1.4 !important;
     }
 
     .vl-cta-content .title {

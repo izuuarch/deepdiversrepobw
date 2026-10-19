@@ -522,186 +522,18 @@
     }
 </style>
 <style>
-  .vl-contact-section-inner,
-  .vl-icon-box-inner {
-    padding: 72px 0;
-  }
-
-  .vl-contact-section-inner {
-    background: #ffffff;
-  }
-
-  .vl-icon-box-inner {
-    background: #f8fafc;
-  }
-
-  .section-title .subtitle {
-    margin: 0 0 8px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #FF6B35;
-  }
-
-  .section-title .title {
-    margin: 0 0 12px;
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: 0;
-    color: #0f172a;
-  }
-
-  .section-title p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #64748b;
-  }
-
-  .contact-info {
-    margin-top: 20px;
-  }
-
-  .info-item {
-    margin-bottom: 12px;
-    padding: 14px 16px;
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    border-left: none;
-    border-radius: 12px;
-    font-size: 14px;
-    line-height: 22px;
-    color: #64748b;
-  }
-
-  .info-item i {
-    color: #003366;
-  }
-
-  .info-item strong {
-    color: #0f172a;
-  }
-
-  .info-item a {
-    color: #003366;
-  }
-
-  .vl-locations-grid {
-    gap: 12px;
-    margin-top: 20px;
-  }
-
-  .location-card,
-  .iconbox,
-  .iconbox.active,
-  .vl-form-inner {
-    background: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 12px;
-    box-shadow: none;
-    padding: 20px;
-  }
-
-  .location-card:hover,
-  .iconbox:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  .location-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: #eef3f8;
-  }
-
-  .location-icon i {
-    color: #003366;
-    font-size: 14px;
-  }
-
-  .location-title,
-  .icon-content .title,
-  .iconbox.active .title {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #0f172a !important;
-  }
-
-  .location-address,
-  .location-address p,
-  .contact-number a,
-  .contact-number span,
-  .iconbox.active a,
-  .iconbox.active .contact-number a {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #64748b !important;
-  }
-
-  .location-header {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
-  }
-
-  .location-phone {
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 10px;
-    color: #0f172a;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .location-phone:hover {
-    background: #eef3f8;
-    color: #003366;
-    transform: none;
-  }
-
-  .location-phone i {
-    color: #003366;
-  }
-
-  .vl-contact-section-inner .vl-section-content .vl-form-inner input[type=text],
-  .vl-contact-section-inner .vl-section-content .vl-form-inner input[type=email],
-  .vl-contact-section-inner .vl-section-content .vl-form-inner textarea,
-  .vl-form-inner .form-control {
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 12px;
-    padding: 12px 16px;
-    height: auto;
-    line-height: 22px;
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 12px;
-  }
-
-  .vl-contact-section-inner .vl-section-content .vl-form-inner textarea {
-    min-height: 120px;
-  }
-
-  .vl-form-inner .btn-area .header-btn1 {
+  .vl-form-inner .btn-area .header-btn1,
+  .vl-form-inner button.header-btn1 {
     background: #003366;
     color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 12px 24px;
     border: none;
-    border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    width: auto;
+  }
+
+  .vl-form-inner .btn-area .header-btn1:hover,
+  .vl-form-inner button.header-btn1:hover {
+    background: #002244;
+    color: #ffffff;
   }
 
   .vl-form-inner .btn-area .header-btn1:after,
@@ -709,88 +541,33 @@
     display: none;
   }
 
-  .vl-form-inner .btn-area .header-btn1 span {
+  .vl-form-inner .btn-area .header-btn1 span,
+  .vl-form-inner button.header-btn1 span {
     background: transparent;
     width: auto;
     height: auto;
-    line-height: inherit;
+    line-height: 1;
     border-radius: 0;
-    color: inherit;
-  }
-
-  .vl-form-inner .btn-area .header-btn1 span i {
-    transform: none;
-  }
-
-  .vl-form-inner .btn-area .header-btn1:hover {
-    background: #002244;
     color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .vl-form-inner .btn-area .header-btn1 span i,
+  .vl-form-inner button.header-btn1 span i,
+  .vl-form-inner .btn-area .header-btn1:hover span,
+  .vl-form-inner .btn-area .header-btn1:hover span i {
     transform: none;
+    color: #ffffff;
   }
 
-  .vl-icon-box-inner .iconbox,
-  .vl-icon-box-inner .iconbox.active {
-    background: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: none;
-  }
-
-  .vl-icon-box-inner .iconbox .icon-box-flex {
-    margin-bottom: 12px;
-    gap: 12px;
-  }
-
-  .vl-icon-box-inner .iconbox .icon-box-flex .icon span,
-  .vl-icon-box-inner .iconbox.active .icon-box-flex .icon span {
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    margin-right: 0;
-    border-radius: 10px;
-    background: #eef3f8;
-  }
-
-  .vl-icon-box-inner .iconbox .icon-box-flex .icon-content .title {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #0f172a;
-  }
-
-  .vl-icon-box-inner .iconbox .contact-number {
-    padding-top: 12px;
-    border-top: 1px solid rgba(226, 232, 240, 0.9);
-  }
-
-  .vl-icon-box-inner .iconbox .contact-number:after {
-    display: none;
-  }
-
-  .vl-icon-box-inner .iconbox .contact-number a,
-  .vl-icon-box-inner .iconbox .contact-number span {
-    font-size: 14px;
+  .vl-contact-section-inner .vl-section-content .vl-form-inner input[type="text"]::placeholder,
+  .vl-contact-section-inner .vl-section-content .vl-form-inner input[type="email"]::placeholder,
+  .vl-contact-section-inner .vl-section-content .vl-form-inner textarea::placeholder,
+  .vl-form-inner .form-control::placeholder {
+    font-size: 12px;
     font-weight: 400;
-    line-height: 22px;
-    color: #64748b;
-  }
-
-  @media (max-width: 576px) {
-    .vl-contact-section-inner,
-    .vl-icon-box-inner {
-      padding: 48px 0;
-    }
-
-    .section-title .title {
-      font-size: 24px;
-      line-height: 1.33;
-    }
-
-    .vl-form-inner .btn-area .header-btn1 {
-      width: 100%;
-      justify-content: center;
-    }
+    padding-top: 0;
   }
 </style>
 

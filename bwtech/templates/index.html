@@ -181,13 +181,18 @@
         text-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     
+    .vl-hero-section-title {
+        text-align: center;
+        width: 100%;
+    }
+
     .vl-hero-section-title p {
         font-size: 1.125rem;
         line-height: 1.55;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem;
         color: rgba(255, 255, 255, 0.95);
         font-weight: 400;
-        max-width: 90%;
+        max-width: 640px;
     }
     
     /* Hero Button Container */
@@ -195,6 +200,7 @@
         display: flex;
         gap: 12px;
         align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 1.5rem;
     }
@@ -298,11 +304,14 @@
         width: 100%;
         margin: 0;
         align-items: center;
+        justify-content: center;
     }
     
-    .vl-hero-slider .col-lg-7 {
+    .vl-hero-slider .col-lg-8 {
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     
     /* Social icons positioning */
@@ -439,6 +448,7 @@
         
         .vl-hero-btn {
             flex-direction: column;
+            align-items: center;
             gap: 0.875rem;
             width: 100%;
             margin-bottom: 2rem;
@@ -563,12 +573,9 @@
             
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-7">
+                    <div class="col-lg-8">
                         <div class="vl-hero-section-title">
-                            <!-- <h5 class="vl-subtitle">
-                                Delivering Excellence in Marine & Offshore Solutions
-                            </h5> -->
-                            <h1 class="vl-title text-anime-style-3">Reliable Marine & Underwater Services</h1>
+                            <h1 class="vl-title">Reliable Marine & Underwater Services</h1>
                             <p>
                                 From underwater inspections to offshore maintenance, 
                                 BW Tech ensures safety, precision, and innovation in every project.
@@ -579,7 +586,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5"></div>
                 </div>
             </div>
         </div>
@@ -600,12 +606,9 @@
             
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-7">
+                    <div class="col-lg-8">
                         <div class="vl-hero-section-title">
-                            <!-- <h5 class="vl-subtitle" style="margin-top: 150px;">
-                                Trusted Experts in Marine & Offshore Solutions
-                            </h5> -->
-                            <h1 class="vl-title text-anime-style-3">Innovative Underwater & Offshore Services</h1>
+                            <h1 class="vl-title">Innovative Underwater & Offshore Services</h1>
                             <p>
                                 From offshore inspections to marine logistics, 
                                 we deliver cutting-edge solutions for the oil & gas industry.
@@ -616,7 +619,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5"></div>
                 </div>
             </div>
         </div>
@@ -652,8 +654,8 @@
             <div class="col-lg-6">
                 <div class="vl-about-content">
                     <div class="vl-section-title-1">
-                        <h2 class="subtitle" data-aos="fade-right">About BW Tech Global</h2>
-                        <h3 class="title text-anime-style-3">Industry Leaders in Marine & Offshore Solutions</h3>
+                        <h2 class="subtitle">About BW Tech Global</h2>
+                        <h3 class="title">Industry Leaders in Marine & Offshore Solutions</h3>
                         <p class="pb-32">
                             With over a decade of expertise, BW Tech Global Logistics Services stands at the 
                             forefront of underwater engineering and marine operations. Our commitment to 
@@ -662,7 +664,7 @@
                         </p>
                     </div>
                     
-                    <div class="row">
+                    <div class="row about-features">
                         <div class="col-md-6">
                             <div class="feature-box mb-4">
                                 <i class="fa-solid fa-certificate text-primary me-2"></i>
@@ -1369,7 +1371,8 @@
 
 <style>
     .why-choose-section {
-        background: #f8fafc;
+        background: linear-gradient(135deg, #002244 0%, #003366 50%, #00509E 100%);
+        color: #ffffff;
         padding: 72px 0;
     }
 
@@ -1392,7 +1395,7 @@
         font-size: 30px;
         font-weight: 800;
         line-height: 1.2;
-        color: #0f172a;
+        color: #ffffff;
     }
 
     .why-layout {
@@ -1416,16 +1419,16 @@
         --bs-accordion-border-width: 0;
         --bs-accordion-bg: transparent;
         --bs-accordion-btn-focus-box-shadow: none;
-        --bs-accordion-active-bg: #ffffff;
-        --bs-accordion-active-color: #0f172a;
-        --bs-accordion-btn-color: #0f172a;
+        --bs-accordion-active-bg: rgba(255, 107, 53, 0.18);
+        --bs-accordion-active-color: #ffffff;
+        --bs-accordion-btn-color: #ffffff;
         display: grid;
         gap: 12px;
     }
 
     .why-reasons .accordion-item {
-        background: #ffffff;
-        border: 1px solid rgba(226, 232, 240, 0.9);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
         border-radius: 12px;
         overflow: hidden;
     }
@@ -1435,8 +1438,8 @@
         align-items: center;
         gap: 14px;
         padding: 16px;
-        background: #ffffff;
-        color: #0f172a;
+        background: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -1444,8 +1447,8 @@
     }
 
     .why-reasons .accordion-button:not(.collapsed) {
-        background: #ffffff;
-        color: #0f172a;
+        background: rgba(255, 107, 53, 0.18);
+        color: #ffffff;
         box-shadow: none;
     }
 
@@ -1454,6 +1457,7 @@
         width: 14px;
         height: 14px;
         background-size: 14px;
+        filter: brightness(10);
     }
 
     .why-reasons .accordion-body {
@@ -1461,7 +1465,8 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
-        color: #64748b;
+        color: rgba(255, 255, 255, 0.9);
+        background: transparent;
     }
 
     .why-icon {
@@ -1469,12 +1474,19 @@
         height: 36px;
         flex: 0 0 36px;
         border-radius: 10px;
-        background: #eef3f8;
-        color: #003366;
+        background: rgba(255, 107, 53, 0.2);
+        color: #FF6B35;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         font-size: 14px;
+    }
+
+    .why-point {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 12px;
+        padding: 16px;
     }
 
     .why-point h3 {
@@ -1482,7 +1494,7 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
-        color: #0f172a;
+        color: #ffffff;
     }
 
     .why-point p {
@@ -1490,7 +1502,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
-        color: #64748b;
+        color: rgba(255, 255, 255, 0.86);
     }
 
     .why-point .why-icon {
@@ -2238,8 +2250,8 @@
 .stat-item {
     text-align: left;
     padding: 14px;
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.8);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
 }
 
@@ -2247,7 +2259,7 @@
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
-    color: #003366;
+    color: #FF6B35;
     display: block;
 }
 
@@ -2255,7 +2267,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    color: #64748b;
+    color: #FF6B35;
     margin-top: 2px;
 }
 
@@ -2264,26 +2276,66 @@
     padding: 72px 0;
 }
 
+.vl-about-section .vl-section-title-1 .subtitle {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF6B35;
+}
+
+.vl-about-section .vl-section-title-1 .title {
+    margin: 0 0 12px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #0f172a;
+}
+
+.vl-about-section .vl-section-title-1 p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #64748b;
+}
+
+.vl-about-section .about-features {
+    --bs-gutter-x: 12px;
+    --bs-gutter-y: 12px;
+    row-gap: 12px;
+}
+
+.vl-about-section .about-features > [class*="col-"] {
+    margin-bottom: 12px;
+}
+
 .vl-about-section .feature-box {
-    background: #f8fafc;
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: #003366;
+    border: 1px solid #003366;
     border-radius: 12px;
     padding: 14px 16px;
     height: 100%;
+    margin-bottom: 0;
+}
+
+.vl-about-section .feature-box i {
+    color: #FF6B35 !important;
 }
 
 .vl-about-section .feature-box strong {
     display: block;
     font-size: 14px;
     font-weight: 700;
-    color: #0f172a;
+    color: #FF6B35;
     margin-top: 8px;
 }
 
 .vl-about-section .feature-box p {
     font-size: 12px;
     line-height: 16px;
-    color: #64748b;
+    color: #FF6B35;
     margin-top: 4px;
 }
 
@@ -2551,8 +2603,9 @@
   <div class="container">
     <div class="vl-certifications-title mb-60 text-center">
       <div class="vl-section-title-1">
-        <h2 class="title text-anime-style-3">We are Certified & Approved</h2>
-        <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <h2 class="cert-kicker">Certifications</h2>
+        <h3 class="title">We are Certified & Approved</h3>
+        <p>
           BW Tech Global Logistics Services PVT Limited holds various certifications and approvals to provide high-quality services to the marine, oil/gas, and underwater industries. 
           Our company is fully registered and complies with the highest standards.
         </p> 
@@ -2633,13 +2686,13 @@
     </div>
 
     <!-- VSLTEC -->
-    <div class="vl-certification-item" style="background: black;">
+    <div class="vl-certification-item">
       <a href="https://www.vsltec.com/" target="_blank" class="certification-link">
-        <div class="vl-certification-logo">
+        <div class="vl-certification-logo" style="background:#0f172a;border-radius:10px;">
           <img class="w-100" src="{%static 'assets/img/team/vsltec.svg'%}" alt="VSLTEC Certification">
         </div>
         <div class="vl-certification-content text-center">
-          <h4 class="certification-title text-white">VSLTEC</h4>
+          <h4 class="certification-title">VSLTEC</h4>
         </div>
       </a>
     </div>
@@ -2657,13 +2710,13 @@
     </div>
 
     <!-- CleanQuote -->
-    <div class="vl-certification-item" style="background: black;">
+    <div class="vl-certification-item">
       <a href="https://cleanquote.com/cleaning-services/underwater-services/" target="_blank" class="certification-link">
-        <div class="vl-certification-logo">
+        <div class="vl-certification-logo" style="background:#0f172a;border-radius:10px;">
           <img class="w-100" src="{%static 'assets/img/team/cleanquote.svg'%}" alt="CleanQuote Certification">
         </div>
         <div class="vl-certification-content text-center">
-          <h4 class="certification-title text-white">CleanQuote</h4>
+          <h4 class="certification-title">CleanQuote</h4>
         </div>
       </a>
     </div>
@@ -2687,40 +2740,56 @@
 <style>
 /* Certifications Section Styling */
 .vl-certifications-section {
-    background: #f8f9fa;
-    padding: 80px 0;
+    background: #ffffff;
+    padding: 72px 0;
+}
+
+.vl-certifications-title {
+    max-width: 640px;
+    margin: 0 auto 28px;
+}
+
+.cert-kicker {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF6B35;
 }
 
 .vl-certifications-title .title {
-    font-size: 1.875rem;
+    font-size: 30px;
     font-weight: 800;
     line-height: 1.2;
-    color: #003366;
-    margin-bottom: 1rem;
+    letter-spacing: 0;
+    color: #0f172a;
+    margin: 0 0 10px;
 }
 
 .vl-certifications-title p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.7;
-    max-width: 800px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #64748b;
+    line-height: 24px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
 .vl-certification-item {
     background: #ffffff;
     border-radius: 12px;
-    padding: 30px 20px;
+    padding: 16px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05);
-    margin: 10px;
+    box-shadow: none;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    margin: 8px;
+    height: 100%;
 }
 
 .vl-certification-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: none;
+    box-shadow: none;
 }
 
 .vl-certification-logo {
@@ -2739,10 +2808,11 @@
 }
 
 .certification-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #003366;
-    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #0f172a;
+    margin: 8px 0 0;
 }
 
 /* Owl Carousel Customization */

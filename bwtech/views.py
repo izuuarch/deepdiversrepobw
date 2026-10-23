@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from django.conf import settings
-from django.http import FileResponse
+from django.http import FileResponse, HttpResponse
 from django.shortcuts import render
 from .forms import *
 from django.shortcuts import render, get_object_or_404, redirect
@@ -286,3 +286,6 @@ def robots_txt(request):
 def llms_txt(request):
     file_path = Path(settings.BASE_DIR) / "llms.txt"
     return FileResponse(file_path.open("rb"), content_type="text/plain; charset=utf-8")
+
+def indexnow_key(request):
+    return HttpResponse("bwtech2026indexnowkey9876543210ab", content_type="text/plain")

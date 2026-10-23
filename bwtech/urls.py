@@ -18,6 +18,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
     path('llms.txt', llms_txt, name='llms_txt'),
+    path('bwtech2026indexnowkey9876543210ab.txt', indexnow_key, name='indexnow_key'),
     path('services/<str:country_slug>/<str:service_slug>/', seo_service_detail, name='seo_service_detail'),   
     path('book/<int:service_id>/', book_service, name='book_service'),
     path('projects/<slug:slug>/', seo_project_detail, name='seo_project_detail'),

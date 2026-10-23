@@ -3,118 +3,235 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-33BQR73GLD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-33BQR73GLD');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}BW Tech Global - Leading Underwater Inspection & Diving Services{% endblock %}</title>
     {% block metadesc %}
     <meta name="description" content=" BW Tech Global provides expert underwater inspection and diving services in Nigeria, Ghana, Ivory Coast, and across West Africa.">
     {% endblock %}
-  <!-- Structured Data Markup for Rich Results -->
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "BW Tech Global",
-    "alternateName": "BW Tech",
-    "url": "https://bwtechglobal.com",
-    "logo": "https://bwtechglobal.com/static/assets/img/logo/BW_TECH_LOGO.png",
-    "description": "Leading underwater inspection and diving services company providing expert commercial diving, marine services, and underwater inspections across West Africa.",
-   "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "15, Creek Road, Apapa, Lagos State, Nigeria",
-            "addressLocality": "Lagos",
-            "addressRegion": "Lagos",
-            "postalCode": "100001",
-            "addressCountry": "NG"
-        },
-     "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+234-817-140-9641",
-            "contactType": "customer service",
-            "email": "support@bwtechglobal.com",
-            "contactOption": "TollFree",
-            "areaServed": ["NG", "GH", "CI", "SN", "BJ", "TG"],
-            "availableLanguage": ["en"]
-        },
-    "sameAs": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://bwtechglobal.com/#website",
+      "url": "https://bwtechglobal.com/",
+      "name": "BW Tech Global"
+    },
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://bwtechglobal.com/#organization",
+      "name": "BW Tech Global",
+      "alternateName": "BW Tech",
+      "url": "https://bwtechglobal.com/",
+      "logo": "https://bwtechglobal.com/static/assets/img/logo/BW_TECH_LOGO.png",
+      "telephone": "+234-817-140-9641",
+      "email": "support@bwtechglobal.com",
+      "description": "ISO 9001 certified and IACS-approved marine engineering, commercial diving, underwater inspection (IWS/UWILD), ROV surveys, hull cleaning, propeller polishing, and SOLAS lifeboat/life raft safety inspection provider across West Africa.",
+      "sameAs": [
         "https://www.facebook.com/bwtechglobal",
         "https://www.linkedin.com/company/bwtechglobal",
         "https://twitter.com/bwtechglobal"
-    ],
-     "areaServed": [
-            {
-                "@type": "City",
-                "name": "Lagos",
-                "address": {
-                    "@type": "15, Creek Road, Apapa, Lagos State, Nigeria",
-                    "addressCountry": "NG"
-                }
-            },
-            {
-                "@type": "City",
-                "name": "Abidjan", 
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "CI"
-                }
-            },
-            {
-                "@type": "City",
-                "name": "Ghana",
-                "address": {
-                    "@type": "Old SFC Building Room 22/23 Fishing Harbour Accra, Ghana", 
-                    "addressCountry": "GH"
-                }
-            },
-            {
-                "@type": "City",
-                "name": "Lome",
-                "address": {
-                    "@type": "ADAWLATO 18 Rue ANGLE AV DE LA LIBERATION ET RUE DU GRAND MARCHE LOME, Togo",
-                    "addressCountry": "TG"
-                }
-            },
-            {
-                "@type": "City",
-                "name": "Conakry",
-                "address": {
-                    "@type": "Coleah Domino By Total Fuel Station Conakry, Guinea",
-                    "addressCountry": "GN"
-                }
-            },
-            {
-                "@type": "City",
-                "name": "Dakar",
-                "address": {
-                    "@type": "Dakar Port mole 10 Quai de pêche Dakar, Senegal",
-                    "addressCountry": "SN"
-                }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "15, Creek Road, Apapa",
+        "addressLocality": "Lagos",
+        "addressRegion": "Lagos State",
+        "postalCode": "100001",
+        "addressCountry": "NG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+234-817-140-9641",
+        "contactType": "customer service",
+        "email": "support@bwtechglobal.com",
+        "areaServed": ["NG", "GH", "CI", "SN", "BJ", "TG", "GN"],
+        "availableLanguage": ["en", "fr"]
+      },
+      "subOrganization": [
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Nigeria Head Office (Apapa & Tin Can Island Port)",
+          "telephone": "+234-817-140-9641",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "15, Creek Road, Apapa",
+            "addressLocality": "Lagos",
+            "addressCountry": "NG"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Guinea Branch (Port of Conakry, Kamsar & Dapilon)",
+          "telephone": "+224-626-149-570",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Coleah Domino By Total Fuel Station",
+            "addressLocality": "Conakry",
+            "addressCountry": "GN"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Benin Branch (Port of Cotonou)",
+          "telephone": "+234-902-232-3679",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cotonou - Cadjehou",
+            "addressLocality": "Cotonou",
+            "addressCountry": "BJ"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Togo Branch (Port of Lomé)",
+          "telephone": "+234-902-232-3679",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ADAWLATO, 18 Rue Angle Av de la Liberation et Rue du Grand Marche",
+            "addressLocality": "Lomé",
+            "addressCountry": "TG"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Ghana Branch (Port of Tema & Accra)",
+          "telephone": "+234-902-232-3679",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Old SFC Building Room 22/23, Fishing Harbour",
+            "addressLocality": "Tema / Accra",
+            "addressCountry": "GH"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Côte d'Ivoire Branch (Port of Abidjan)",
+          "telephone": "+234-902-232-3679",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cocody Cité des Arts, 23 BP 3922 Abidjan 23",
+            "addressLocality": "Abidjan",
+            "addressCountry": "CI"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "BW Tech Global — Senegal Branch (Port of Dakar)",
+          "telephone": "+234-902-232-3679",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dakar Port Mole 10, Quai de Pêche",
+            "addressLocality": "Dakar",
+            "addressCountry": "SN"
+          }
+        }
+      ],
+      "areaServed": [
+        { "@type": "Place", "name": "Apapa Port, Lagos, Nigeria" },
+        { "@type": "Place", "name": "Tin Can Island Port, Lagos, Nigeria" },
+        { "@type": "Place", "name": "Port of Cotonou, Benin" },
+        { "@type": "Place", "name": "Port of Lomé, Togo" },
+        { "@type": "Place", "name": "Port of Tema, Ghana" },
+        { "@type": "Place", "name": "Port of Abidjan, Côte d'Ivoire" },
+        { "@type": "Place", "name": "Autonomous Port of Conakry, Guinea" },
+        { "@type": "Place", "name": "Port of Kamsar, Guinea" },
+        { "@type": "Place", "name": "Port of Dapilon, Guinea" },
+        { "@type": "Place", "name": "Port of Dakar, Senegal" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Subsea & Marine Engineering Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IACS-Approved In-Water Survey (IWS) & UWILD Inspections"
             }
-        ],
-        "serviceType": [
-            "Commercial Diving Services",
-            "Underwater Inspections",
-            "Marine Construction",
-            "In-Water Surveys",
-            "Underwater Maintenance",
-            "Marine Engineering"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Underwater Hull Cleaning, Sea Chest Maintenance & Propeller Polishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Diving, Subsea Welding & Emergency Repairs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SOLAS Life Raft, Lifeboat & Marine Safety Inspections (LSA/FFA)"
+            }
+          }
         ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "BW Tech Global",
-    "url": "https://bwtechglobal.com",
-    "description": "Leading underwater inspection and diving services company serving West Africa.",
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://bwtechglobal.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+      }
     },
-    "inLanguage": "en"
+    {
+      "@type": "FAQPage",
+      "@id": "https://bwtechglobal.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which ports in West Africa does BW Tech Global cover for underwater inspections and commercial diving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BW Tech Global provides 24/7 vessel attendance across 10 major West African ports: Apapa Port and Tin Can Island Port (Lagos, Nigeria), Port of Cotonou (Benin), Port of Lomé (Togo), Port of Tema (Ghana), Port of Abidjan (Côte d'Ivoire), Autonomous Port of Conakry, Port of Kamsar, and Port of Dapilon (Guinea), and Port of Dakar (Senegal)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are BW Tech Global's In-Water Surveys (IWS) approved by IACS classification societies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BW Tech Global conducts IACS-compliant In-Water Surveys (IWS) and UWILD inspections with real-time two-way audio and high-definition CCTV video documentation for class surveyors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does BW Tech Global perform lifeboat and life raft safety inspections alongside subsea works?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. In addition to commercial diving, hull cleaning, and propeller polishing, BW Tech Global provides certified SOLAS LSA/FFA safety inspections and servicing for life rafts, lifeboats, and marine safety equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels ports d'Afrique de l'Ouest BW Tech Global couvre-t-il pour les travaux sous-marins et l'inspection IWS ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BW Tech Global intervient 24h/24 pour les travaux de plongée industrielle, l'inspection sous-marine (IWS/UWILD), le nettoyage de coque et le polissage d'hélice au Port d'Abidjan, Port de Dakar, Port de Cotonou, Port de Lomé, Port Autonome de Conakry, Port de Kamsar, Port de Dapilon, Port de Tema et Ports de Lagos (Apapa et Tin Can)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "BW Tech Global réalise-t-il l'inspection SOLAS des embarcations de sauvetage et radeaux de survie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, BW Tech Global assure l'inspection annuelle et quinquennale SOLAS (LSA/FFA) des embarcations de sauvetage, radeaux de survie, bossoirs et systèmes anti-incendie dans tous les ports d'Afrique de l'Ouest."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
     {% block seo_meta %}

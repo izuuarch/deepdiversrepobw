@@ -235,7 +235,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section-header text-center">
+        <div class="section-header">
           <h2 class="section-title">Explore More Projects</h2>
           <p class="section-subtitle">Discover our other successful marine and offshore projects</p>
         </div>
@@ -269,7 +269,7 @@
       </div>
       {% endfor %}
     </div>
-    <div class="text-center mt-4">
+    <div class="mt-4">
       <a href="{% url 'projects' %}" class="view-all-btn">
         View All Projects <i class="fa-solid fa-arrow-right"></i>
       </a>
@@ -857,6 +857,143 @@
     .project-card-sm-content {
       padding: 15px;
     }
+  }
+
+  .project-detail-content,
+  .sidebar-widget,
+  .project-card-sm {
+    background: #003366;
+    border: 1px solid #003366;
+    border-radius: 12px;
+    box-shadow: none;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .project-detail-content {
+    padding: 24px;
+  }
+
+  .project-card-sm:hover,
+  .sidebar-widget:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-detail-content .project-title,
+  .project-detail-content .project-excerpt,
+  .project-detail-content .section-title,
+  .project-detail-content .project-description,
+  .project-detail-content .project-content,
+  .project-detail-content .challenges-content,
+  .project-detail-content .impact-content,
+  .project-detail-content .detail-content h4,
+  .project-detail-content .detail-content p,
+  .project-detail-content .cta-card h3,
+  .project-detail-content .cta-card p {
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .project-detail-content .section-title {
+    border-bottom-color: #FF6B35;
+  }
+
+  .project-detail-content .badge,
+  .status-completed,
+  .status-ongoing,
+  .badge.location,
+  .badge.date {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .project-detail-content .detail-card,
+  .project-detail-content .cta-card {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+  }
+
+  .project-detail-content .detail-icon {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .project-detail-content .detail-icon i {
+    color: #ffffff;
+  }
+
+  .project-detail-content .cta-buttons {
+    justify-content: flex-start;
+  }
+
+  .cta-btn.primary,
+  .cta-btn.primary:hover,
+  .sidebar-btn.primary,
+  .sidebar-btn.primary:hover,
+  .project-card-sm-link,
+  .project-card-sm-link:hover {
+    background: #ffffff;
+    color: #003366;
+    border-radius: 12px;
+    border: none;
+  }
+
+  .project-card-sm-link,
+  .project-card-sm-link:hover {
+    display: inline-flex;
+    padding: 10px 16px;
+    text-decoration: none;
+  }
+
+  .cta-btn.secondary,
+  .cta-btn.secondary:hover,
+  .sidebar-btn.secondary,
+  .sidebar-btn.secondary:hover {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+  }
+
+  .sidebar-widget .widget-title,
+  .sidebar-widget .info-item span,
+  .sidebar-widget .info-item strong,
+  .sidebar-widget .info-item i,
+  .sidebar-widget p,
+  .related-project-content h5 a,
+  .related-project-content h5 a:hover,
+  .related-project-content .project-meta {
+    color: #ffffff;
+  }
+
+  .more-projects-section .section-header {
+    text-align: left;
+  }
+
+  .more-projects-section .section-header .section-subtitle {
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .project-card-sm-content h4,
+  .project-card-sm-content h4 a,
+  .project-card-sm-content h4 a:hover,
+  .project-card-sm-content p,
+  .project-card-sm-meta,
+  .project-card-sm-meta span,
+  .project-card-sm-meta i {
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .view-all-btn,
+  .view-all-btn:hover {
+    background: #003366;
+    color: #ffffff;
+    border-radius: 12px;
+    transform: none;
+    box-shadow: none;
   }
 </style>
 

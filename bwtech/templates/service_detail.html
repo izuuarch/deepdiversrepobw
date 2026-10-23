@@ -384,7 +384,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="section-header text-center">
+        <div class="section-header">
           <h2 class="section-title">Explore Our Services</h2>
           <p class="section-subtitle">Discover more professional solutions for your marine and offshore needs</p>
         </div>
@@ -403,9 +403,9 @@
             {% endif %}
           </div>
           <div class="service-card-content">
-            <h4><a href="{% url 'service_detail' service.id %}">{{service.title}}</a></h4>
+            <h4><a href="{% url 'service_detail' service.slug %}">{{service.title}}</a></h4>
             <p>{{service.short_description|default:service.description|truncatewords:15}}</p>
-            <a href="{% url 'service_detail' service.id %}" class="service-card-link">
+            <a href="{% url 'service_detail' service.slug %}" class="service-card-link">
               Learn More <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -413,7 +413,7 @@
       </div>
       {% endfor %}
     </div>
-    <div class="text-center mt-4">
+    <div class="mt-4">
       <a href="{% url 'services' %}" class="view-all-btn">
         View All Services <i class="fa-solid fa-arrow-right"></i>
       </a>
@@ -1010,6 +1010,161 @@
 
     .booking-title {
       font-size: 1.5rem;
+    }
+  }
+
+  .service-detail-content,
+  .sidebar-widget,
+  .service-card {
+    background: #003366;
+    border: 1px solid #003366;
+    border-radius: 12px;
+    box-shadow: none;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .service-detail-content {
+    padding: 24px;
+  }
+
+  .service-card:hover,
+  .sidebar-widget:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .service-detail-content .service-header {
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    text-align: left;
+  }
+
+  .service-detail-content .service-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .service-detail-content .service-icon i {
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .service-detail-content .service-main-title,
+  .service-detail-content .section-title,
+  .service-detail-content .booking-title,
+  .service-detail-content .backlinks-header h4,
+  .service-detail-content p,
+  .service-detail-content li,
+  .service-description,
+  .features-grid,
+  .benefits-list,
+  .process-steps,
+  .why-choose-content,
+  .booking-subtitle {
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .service-detail-content .section-title {
+    border-bottom-color: #FF6B35;
+  }
+
+  .service-detail-content .badge.available,
+  .service-detail-content .badge.professional {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
+  .service-detail-content .minimal-backlinks {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .service-detail-content .location-link,
+  .service-detail-content .location-link:hover {
+    color: #ffffff;
+    background: transparent;
+    border-left-color: #FF6B35;
+  }
+
+  .service-detail-content .features-grid li,
+  .service-detail-content .benefits-list li {
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .service-detail-content .features-grid li:before,
+  .service-detail-content .benefits-list li:before {
+    color: #ffffff;
+  }
+
+  .booking-card {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+  }
+
+  .booking-btn,
+  .booking-btn:hover,
+  .sidebar-btn,
+  .sidebar-btn:hover {
+    background: #ffffff;
+    color: #003366;
+    border-radius: 12px;
+  }
+
+  .sidebar-widget .widget-title,
+  .sidebar-widget .contact-item span,
+  .sidebar-widget .contact-item a,
+  .sidebar-widget .contact-item a:hover,
+  .sidebar-widget .contact-item i {
+    color: #ffffff;
+  }
+
+  .more-services-section .section-header {
+    text-align: left;
+  }
+
+  .more-services-section .section-header .section-subtitle {
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .service-card-content h4,
+  .service-card-content h4 a,
+  .service-card-content h4 a:hover,
+  .service-card-content p,
+  .service-card-link,
+  .service-card-link:hover {
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .service-card-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .view-all-btn,
+  .view-all-btn:hover {
+    background: #003366;
+    color: #ffffff;
+    border-radius: 12px;
+    transform: none;
+    box-shadow: none;
+  }
+
+  @media (max-width: 768px) {
+    .service-header {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .service-icon {
+      align-self: flex-start;
     }
   }
 </style>

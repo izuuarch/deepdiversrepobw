@@ -1048,6 +1048,32 @@
       text-align: left;
     }
   }
+
+  .vl-breadcrumb-title h6.heading {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+
+  @media (max-width: 991px) {
+    .vl-breadcrumb-title h6.heading {
+      font-size: 36px;
+      line-height: 1.05;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .vl-breadcrumb-title h6.heading {
+      font-size: 24px;
+      line-height: 1.15;
+      padding-bottom: 10px;
+    }
+  }
 </style>
 
 <!--===== BREADCRUMB AREA STARTS =======-->
@@ -1056,7 +1082,7 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="vl-breadcrumb-title">
-          <h2 class="heading">About Us</h2>
+          <h6 class="heading">About Us</h6>
             <div class="vl-breadcrumb-list">
               <span><a href="{%url 'home'%}">Home</a></span>
               <span class="dvir"><i class="fa-solid fa-angle-right"></i></span>
